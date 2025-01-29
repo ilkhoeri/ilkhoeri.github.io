@@ -7,7 +7,9 @@ import { getTableOfContents } from "@/components/toc/config";
 import { Mdx } from "@/components/toc/mdx-component";
 import { compareDesc, format, parseISO } from "@/lib/dates";
 
-export const dynamic = 'force-static'
+export const dynamic = 'force-static';
+export const dynamicParams = true;
+
 function PostCard(post: Page) {
   const Content = getMDXComponent(post.body.code);
 
