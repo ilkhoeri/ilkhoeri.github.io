@@ -32,7 +32,7 @@ interface SlugParams {
 }
 
 export async function generateStaticParams() {
-  return allPages.map(post => ({ slug: page._raw.flattenedPath }));
+  return allPages.map(page => ({ slug: page._raw.flattenedPath }));
 }
 
 async function getPathFromParams({ params }: SlugParams) {
