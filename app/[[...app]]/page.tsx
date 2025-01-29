@@ -7,10 +7,6 @@ import { getTableOfContents } from "@/components/toc/config";
 import { Mdx } from "@/components/toc/mdx-component";
 import { compareDesc, format, parseISO } from "@/lib/dates";
 
-export function generateStaticParams() {
-  return []
-}
-
 function PostCard(post: Page) {
   const Content = getMDXComponent(post.body.code);
 
@@ -35,9 +31,9 @@ interface SlugParams {
   params: Promise<{ app: string[] }>;
 }
 
-// export async function generateStaticParams() {
-//   return allPosts.map(post => ({ slug: post._raw.flattenedPath }));
-// }
+export async function generateStaticParams() {
+  return allPages.map(post => ({ slug: page._raw.flattenedPath }));
+}
 
 async function getPathFromParams({ params }: SlugParams) {
   const slug = (await params).app?.join("/") || "";
