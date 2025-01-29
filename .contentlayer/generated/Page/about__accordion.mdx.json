@@ -1,0 +1,24 @@
+{
+  "title": "Accordion",
+  "date": "2024-02-28T00:00:00.000Z",
+  "published": false,
+  "featured": false,
+  "component": false,
+  "toc": true,
+  "body": {
+    "raw": "\n# Google Maps\n\nAbout Accordion\n",
+    "code": "var Component=(()=>{var p=Object.create;var s=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var _=(e,n)=>()=>(n||e((n={exports:{}}).exports,n),n.exports),f=(e,n)=>{for(var t in n)s(e,t,{get:n[t],enumerable:!0})},r=(e,n,t,c)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let a of u(n))!g.call(e,a)&&a!==t&&s(e,a,{get:()=>n[a],enumerable:!(c=h(n,a))||c.enumerable});return e};var j=(e,n,t)=>(t=e!=null?p(x(e)):{},r(n||!e||!e.__esModule?s(t,\"default\",{value:e,enumerable:!0}):t,e)),M=e=>r(s({},\"__esModule\",{value:!0}),e);var l=_((C,i)=>{i.exports=_jsx_runtime});var A={};f(A,{default:()=>d,frontmatter:()=>b});var o=j(l()),b={title:\"Accordion\",date:\"2024-02-28\"};function m(e){let n={a:\"a\",h1:\"h1\",p:\"p\",span:\"span\",...e.components};return(0,o.jsxs)(o.Fragment,{children:[(0,o.jsxs)(n.h1,{id:\"google-maps\",children:[(0,o.jsx)(n.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#google-maps\",children:(0,o.jsx)(n.span,{className:\"icon icon-link\"})}),\"Google Maps\"]}),`\n`,(0,o.jsx)(n.p,{children:\"About Accordion\"})]})}function d(e={}){let{wrapper:n}=e.components||{};return n?(0,o.jsx)(n,{...e,children:(0,o.jsx)(m,{...e})}):m(e)}return M(A);})();\n;return Component;"
+  },
+  "_id": "about/accordion.mdx",
+  "_raw": {
+    "sourceFilePath": "about/accordion.mdx",
+    "sourceFileName": "accordion.mdx",
+    "sourceFileDir": "about",
+    "contentType": "mdx",
+    "flattenedPath": "about/accordion"
+  },
+  "type": "Page",
+  "slug": "about/accordion",
+  "slugAsParams": "accordion",
+  "url": "/about/accordion"
+}

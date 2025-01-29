@@ -1,0 +1,24 @@
+{
+  "title": "Change me!",
+  "date": "2022-03-11T00:00:00.000Z",
+  "published": false,
+  "featured": false,
+  "component": false,
+  "toc": true,
+  "body": {
+    "raw": "\nWhen you change a source file, Contentlayer automatically updates the content cache, which prompts Next.js to reload the content on screen.\n\n# example\n",
+    "code": "var Component=(()=>{var p=Object.create;var c=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var d=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var _=(n,e)=>()=>(e||n((e={exports:{}}).exports,e),e.exports),j=(n,e)=>{for(var a in e)c(n,a,{get:e[a],enumerable:!0})},r=(n,e,a,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of d(e))!f.call(n,o)&&o!==a&&c(n,o,{get:()=>e[o],enumerable:!(s=x(e,o))||s.enumerable});return n};var g=(n,e,a)=>(a=n!=null?p(u(n)):{},r(e||!n||!n.__esModule?c(a,\"default\",{value:n,enumerable:!0}):a,n)),y=n=>r(c({},\"__esModule\",{value:!0}),n);var l=_((b,i)=>{i.exports=_jsx_runtime});var M={};j(M,{default:()=>m,frontmatter:()=>C});var t=g(l()),C={title:\"Change me!\",date:\"2022-03-11\"};function h(n){let e={a:\"a\",h1:\"h1\",p:\"p\",span:\"span\",...n.components};return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(e.p,{children:\"When you change a source file, Contentlayer automatically updates the content cache, which prompts Next.js to reload the content on screen.\"}),`\n`,(0,t.jsxs)(e.h1,{id:\"example\",children:[(0,t.jsx)(e.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#example\",children:(0,t.jsx)(e.span,{className:\"icon icon-link\"})}),\"example\"]})]})}function m(n={}){let{wrapper:e}=n.components||{};return e?(0,t.jsx)(e,{...n,children:(0,t.jsx)(h,{...n})}):h(n)}return y(M);})();\n;return Component;"
+  },
+  "_id": "change-me.mdx",
+  "_raw": {
+    "sourceFilePath": "change-me.mdx",
+    "sourceFileName": "change-me.mdx",
+    "sourceFileDir": ".",
+    "contentType": "mdx",
+    "flattenedPath": "change-me"
+  },
+  "type": "Page",
+  "slug": "change-me",
+  "slugAsParams": "",
+  "url": "/change-me"
+}

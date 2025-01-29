@@ -1,0 +1,178 @@
+{
+  "cacheItemsMap": {
+    "change-me.mdx": {
+      "document": {
+        "title": "Change me!",
+        "date": "2022-03-11T00:00:00.000Z",
+        "published": false,
+        "featured": false,
+        "component": false,
+        "toc": true,
+        "body": {
+          "raw": "\nWhen you change a source file, Contentlayer automatically updates the content cache, which prompts Next.js to reload the content on screen.\n\n# example\n",
+          "code": "var Component=(()=>{var p=Object.create;var c=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var d=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var _=(n,e)=>()=>(e||n((e={exports:{}}).exports,e),e.exports),j=(n,e)=>{for(var a in e)c(n,a,{get:e[a],enumerable:!0})},r=(n,e,a,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of d(e))!f.call(n,o)&&o!==a&&c(n,o,{get:()=>e[o],enumerable:!(s=x(e,o))||s.enumerable});return n};var g=(n,e,a)=>(a=n!=null?p(u(n)):{},r(e||!n||!n.__esModule?c(a,\"default\",{value:n,enumerable:!0}):a,n)),y=n=>r(c({},\"__esModule\",{value:!0}),n);var l=_((b,i)=>{i.exports=_jsx_runtime});var M={};j(M,{default:()=>m,frontmatter:()=>C});var t=g(l()),C={title:\"Change me!\",date:\"2022-03-11\"};function h(n){let e={a:\"a\",h1:\"h1\",p:\"p\",span:\"span\",...n.components};return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(e.p,{children:\"When you change a source file, Contentlayer automatically updates the content cache, which prompts Next.js to reload the content on screen.\"}),`\n`,(0,t.jsxs)(e.h1,{id:\"example\",children:[(0,t.jsx)(e.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#example\",children:(0,t.jsx)(e.span,{className:\"icon icon-link\"})}),\"example\"]})]})}function m(n={}){let{wrapper:e}=n.components||{};return e?(0,t.jsx)(e,{...n,children:(0,t.jsx)(h,{...n})}):h(n)}return y(M);})();\n;return Component;"
+        },
+        "_id": "change-me.mdx",
+        "_raw": {
+          "sourceFilePath": "change-me.mdx",
+          "sourceFileName": "change-me.mdx",
+          "sourceFileDir": ".",
+          "contentType": "mdx",
+          "flattenedPath": "change-me"
+        },
+        "type": "Page",
+        "slug": "change-me",
+        "slugAsParams": "",
+        "url": "/posts/change-me"
+      },
+      "documentHash": "1738157463907",
+      "hasWarnings": false,
+      "documentTypeName": "Page"
+    },
+    "click-me.mdx": {
+      "document": {
+        "title": "Click me!",
+        "date": "2022-02-28T00:00:00.000Z",
+        "published": false,
+        "featured": false,
+        "component": false,
+        "toc": true,
+        "body": {
+          "raw": "\nBlog posts have their own pages. The content source is a markdown file, parsed to HTML by Contentlayer.\n",
+          "code": "var Component=(()=>{var u=Object.create;var r=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var _=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),C=(t,e)=>{for(var n in e)r(t,n,{get:e[n],enumerable:!0})},a=(t,e,n,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of x(e))!h.call(t,o)&&o!==n&&r(t,o,{get:()=>e[o],enumerable:!(s=d(e,o))||s.enumerable});return t};var M=(t,e,n)=>(n=t!=null?u(f(t)):{},a(e||!t||!t.__esModule?r(n,\"default\",{value:t,enumerable:!0}):n,t)),j=t=>a(r({},\"__esModule\",{value:!0}),t);var m=_((k,i)=>{i.exports=_jsx_runtime});var y={};C(y,{default:()=>l,frontmatter:()=>w});var c=M(m()),w={title:\"Click me!\",date:\"2022-02-28\"};function p(t){let e={p:\"p\",...t.components};return(0,c.jsx)(e.p,{children:\"Blog posts have their own pages. The content source is a markdown file, parsed to HTML by Contentlayer.\"})}function l(t={}){let{wrapper:e}=t.components||{};return e?(0,c.jsx)(e,{...t,children:(0,c.jsx)(p,{...t})}):p(t)}return j(y);})();\n;return Component;"
+        },
+        "_id": "click-me.mdx",
+        "_raw": {
+          "sourceFilePath": "click-me.mdx",
+          "sourceFileName": "click-me.mdx",
+          "sourceFileDir": ".",
+          "contentType": "mdx",
+          "flattenedPath": "click-me"
+        },
+        "type": "Page",
+        "slug": "click-me",
+        "slugAsParams": "",
+        "url": "/posts/click-me"
+      },
+      "documentHash": "1738163845507",
+      "hasWarnings": false,
+      "documentTypeName": "Page"
+    },
+    "index.mdx": {
+      "document": {
+        "title": "Home!",
+        "date": "2022-02-27T17:00:00.000Z",
+        "published": false,
+        "featured": false,
+        "component": false,
+        "toc": true,
+        "body": {
+          "raw": "\r\nHome\r\n",
+          "code": "var Component=(()=>{var p=Object.create;var r=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var f=Object.getOwnPropertyNames;var _=Object.getPrototypeOf,l=Object.prototype.hasOwnProperty;var j=(t,n)=>()=>(n||t((n={exports:{}}).exports,n),n.exports),M=(t,n)=>{for(var e in n)r(t,e,{get:n[e],enumerable:!0})},s=(t,n,e,m)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let o of f(n))!l.call(t,o)&&o!==e&&r(t,o,{get:()=>n[o],enumerable:!(m=d(n,o))||m.enumerable});return t};var h=(t,n,e)=>(e=t!=null?p(_(t)):{},s(n||!t||!t.__esModule?r(e,\"default\",{value:t,enumerable:!0}):e,t)),C=t=>s(r({},\"__esModule\",{value:!0}),t);var i=j((w,a)=>{a.exports=_jsx_runtime});var H={};M(H,{default:()=>x,frontmatter:()=>D});var c=h(i()),D={title:\"Home!\",date:\"2022-02-28\"};function u(t){let n={p:\"p\",...t.components};return(0,c.jsx)(n.p,{children:\"Home\"})}function x(t={}){let{wrapper:n}=t.components||{};return n?(0,c.jsx)(n,{...t,children:(0,c.jsx)(u,{...t})}):u(t)}return C(H);})();\n;return Component;"
+        },
+        "_id": "index.mdx",
+        "_raw": {
+          "sourceFilePath": "index.mdx",
+          "sourceFileName": "index.mdx",
+          "sourceFileDir": ".",
+          "contentType": "mdx",
+          "flattenedPath": ""
+        },
+        "type": "Page",
+        "slug": "",
+        "slugAsParams": "",
+        "url": "/posts/"
+      },
+      "documentHash": "1738168951000",
+      "hasWarnings": false,
+      "documentTypeName": "Page"
+    },
+    "what-is-contentlayer.mdx": {
+      "document": {
+        "title": "What is Contentlayer?",
+        "date": "2022-02-22T00:00:00.000Z",
+        "published": false,
+        "featured": false,
+        "component": false,
+        "toc": true,
+        "body": {
+          "raw": "\n**Contentlayer makes working with content easy.** It is a content preprocessor that validates and transforms your content into type-safe JSON you can easily import into your application.\n",
+          "code": "var Component=(()=>{var u=Object.create;var s=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var y=Object.getOwnPropertyNames;var d=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var h=(t,n)=>()=>(n||t((n={exports:{}}).exports,n),n.exports),_=(t,n)=>{for(var e in n)s(t,e,{get:n[e],enumerable:!0})},i=(t,n,e,a)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let r of y(n))!f.call(t,r)&&r!==e&&s(t,r,{get:()=>n[r],enumerable:!(a=x(n,r))||a.enumerable});return t};var j=(t,n,e)=>(e=t!=null?u(d(t)):{},i(n||!t||!t.__esModule?s(e,\"default\",{value:t,enumerable:!0}):e,t)),g=t=>i(s({},\"__esModule\",{value:!0}),t);var p=h((k,c)=>{c.exports=_jsx_runtime});var w={};_(w,{default:()=>m,frontmatter:()=>C});var o=j(p()),C={title:\"What is Contentlayer?\",date:\"2022-02-22\"};function l(t){let n={p:\"p\",strong:\"strong\",...t.components};return(0,o.jsxs)(n.p,{children:[(0,o.jsx)(n.strong,{children:\"Contentlayer makes working with content easy.\"}),\" It is a content preprocessor that validates and transforms your content into type-safe JSON you can easily import into your application.\"]})}function m(t={}){let{wrapper:n}=t.components||{};return n?(0,o.jsx)(n,{...t,children:(0,o.jsx)(l,{...t})}):l(t)}return g(w);})();\n;return Component;"
+        },
+        "_id": "what-is-contentlayer.mdx",
+        "_raw": {
+          "sourceFilePath": "what-is-contentlayer.mdx",
+          "sourceFileName": "what-is-contentlayer.mdx",
+          "sourceFileDir": ".",
+          "contentType": "mdx",
+          "flattenedPath": "what-is-contentlayer"
+        },
+        "type": "Page",
+        "slug": "what-is-contentlayer",
+        "slugAsParams": "",
+        "url": "/posts/what-is-contentlayer"
+      },
+      "documentHash": "1732208128933",
+      "hasWarnings": false,
+      "documentTypeName": "Page"
+    },
+    "about/accordion.mdx": {
+      "document": {
+        "title": "Accordion",
+        "date": "2024-02-28T00:00:00.000Z",
+        "published": false,
+        "featured": false,
+        "component": false,
+        "toc": true,
+        "body": {
+          "raw": "\n# Google Maps\n\nAbout Accordion\n",
+          "code": "var Component=(()=>{var p=Object.create;var s=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var _=(e,n)=>()=>(n||e((n={exports:{}}).exports,n),n.exports),f=(e,n)=>{for(var t in n)s(e,t,{get:n[t],enumerable:!0})},r=(e,n,t,c)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let a of u(n))!g.call(e,a)&&a!==t&&s(e,a,{get:()=>n[a],enumerable:!(c=h(n,a))||c.enumerable});return e};var j=(e,n,t)=>(t=e!=null?p(x(e)):{},r(n||!e||!e.__esModule?s(t,\"default\",{value:e,enumerable:!0}):t,e)),M=e=>r(s({},\"__esModule\",{value:!0}),e);var l=_((C,i)=>{i.exports=_jsx_runtime});var A={};f(A,{default:()=>d,frontmatter:()=>b});var o=j(l()),b={title:\"Accordion\",date:\"2024-02-28\"};function m(e){let n={a:\"a\",h1:\"h1\",p:\"p\",span:\"span\",...e.components};return(0,o.jsxs)(o.Fragment,{children:[(0,o.jsxs)(n.h1,{id:\"google-maps\",children:[(0,o.jsx)(n.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#google-maps\",children:(0,o.jsx)(n.span,{className:\"icon icon-link\"})}),\"Google Maps\"]}),`\n`,(0,o.jsx)(n.p,{children:\"About Accordion\"})]})}function d(e={}){let{wrapper:n}=e.components||{};return n?(0,o.jsx)(n,{...e,children:(0,o.jsx)(m,{...e})}):m(e)}return M(A);})();\n;return Component;"
+        },
+        "_id": "about/accordion.mdx",
+        "_raw": {
+          "sourceFilePath": "about/accordion.mdx",
+          "sourceFileName": "accordion.mdx",
+          "sourceFileDir": "about",
+          "contentType": "mdx",
+          "flattenedPath": "about/accordion"
+        },
+        "type": "Page",
+        "slug": "about/accordion",
+        "slugAsParams": "accordion",
+        "url": "/posts/about/accordion"
+      },
+      "documentHash": "1738168966252",
+      "hasWarnings": false,
+      "documentTypeName": "Page"
+    },
+    "about/index.mdx": {
+      "document": {
+        "title": "About-Index",
+        "date": "2024-02-27T17:00:00.000Z",
+        "published": false,
+        "featured": false,
+        "component": false,
+        "toc": true,
+        "body": {
+          "raw": "\r\nAbout-Index\r\n\r\nAdd the following animations to your `tailwind.config.js` file:\r\n\r\n## Accordion\r\n\r\n```js title=\"tailwind.config.js\" {5-18}\r\n/** @type {import('tailwindcss').Config} */\r\nmodule.exports = {\r\n  theme: {\r\n    extend: {\r\n      keyframes: {\r\n        \"accordion-down\": {\r\n          from: { height: \"0\" },\r\n          to: { height: \"var(--radix-accordion-content-height)\" }\r\n        },\r\n        \"accordion-up\": {\r\n          from: { height: \"var(--radix-accordion-content-height)\" },\r\n          to: { height: \"0\" }\r\n        }\r\n      },\r\n      animation: {\r\n        \"accordion-down\": \"accordion-down 0.2s ease-out\",\r\n        \"accordion-up\": \"accordion-up 0.2s ease-out\"\r\n      }\r\n    }\r\n  }\r\n};\r\n```\r\n\r\n## Usage\r\n\r\n```tsx\r\nimport {\r\n  Accordion,\r\n  AccordionContent,\r\n  AccordionItem,\r\n  AccordionTrigger\r\n} from \"@/components/ui/accordion\";\r\n```\r\n\r\n```tsx\r\n<Accordion type=\"single\" collapsible>\r\n  <AccordionItem value=\"item-1\">\r\n    <AccordionTrigger>Is it accessible?</AccordionTrigger>\r\n    <AccordionContent>\r\n      Yes. It adheres to the WAI-ARIA design pattern.\r\n    </AccordionContent>\r\n  </AccordionItem>\r\n</Accordion>\r\n```\r\n",
+          "code": "var Component=(()=>{var p=Object.create;var r=Object.defineProperty;var A=Object.getOwnPropertyDescriptor;var y=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,D=Object.prototype.hasOwnProperty;var C=(l,n)=>()=>(n||l((n={exports:{}}).exports,n),n.exports),B=(l,n)=>{for(var a in n)r(l,a,{get:n[a],enumerable:!0})},d=(l,n,a,c)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let i of y(n))!D.call(l,i)&&i!==a&&r(l,i,{get:()=>n[i],enumerable:!(c=A(n,i))||c.enumerable});return l};var m=(l,n,a)=>(a=l!=null?p(g(l)):{},d(n||!l||!l.__esModule?r(a,\"default\",{value:l,enumerable:!0}):a,l)),u=l=>d(r({},\"__esModule\",{value:!0}),l);var t=C((x,o)=>{o.exports=_jsx_runtime});var f={};B(f,{default:()=>h,frontmatter:()=>F});var e=m(t()),F={title:\"About-Index\",date:\"2024-02-28\"};function s(l){let n={a:\"a\",code:\"code\",figcaption:\"figcaption\",figure:\"figure\",h2:\"h2\",p:\"p\",pre:\"pre\",span:\"span\",...l.components};return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(n.p,{children:\"About-Index\"}),`\n`,(0,e.jsxs)(n.p,{children:[\"Add the following animations to your \",(0,e.jsx)(n.code,{children:\"tailwind.config.js\"}),\" file:\"]}),`\n`,(0,e.jsxs)(n.h2,{id:\"accordion\",children:[(0,e.jsx)(n.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#accordion\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Accordion\"]}),`\n`,(0,e.jsxs)(n.figure,{\"data-rehype-pretty-code-figure\":\"\",children:[(0,e.jsx)(n.figcaption,{\"data-rehype-pretty-code-title\":\"\",\"data-language\":\"js\",\"data-theme\":\"github-dark-dimmed\",children:\"tailwind.config.js\"}),(0,e.jsx)(n.pre,{style:{backgroundColor:\"#22272e\",color:\"#adbac7\"},tabIndex:\"0\",\"data-language\":\"js\",\"data-theme\":\"github-dark-dimmed\",children:(0,e.jsxs)(n.code,{\"data-language\":\"js\",\"data-theme\":\"github-dark-dimmed\",style:{display:\"grid\"},children:[(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#768390\"},children:\"/** \"}),(0,e.jsx)(n.span,{style:{color:\"#F47067\"},children:\"@type\"}),(0,e.jsx)(n.span,{style:{color:\"#F69D50\"},children:\" {import('tailwindcss').Config}\"}),(0,e.jsx)(n.span,{style:{color:\"#768390\"},children:\" */\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#6CB6FF\"},children:\"module\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\".\"}),(0,e.jsx)(n.span,{style:{color:\"#6CB6FF\"},children:\"exports\"}),(0,e.jsx)(n.span,{style:{color:\"#F47067\"},children:\" =\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\" {\"})]}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"  theme: {\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"    extend: {\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"      keyframes: {\"})}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'        \"accordion-down\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\": {\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"          from: { height: \"}),(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'\"0\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\" },\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"          to: { height: \"}),(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'\"var(--radix-accordion-content-height)\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\" }\"})]}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"        },\"})}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'        \"accordion-up\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\": {\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"          from: { height: \"}),(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'\"var(--radix-accordion-content-height)\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\" },\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"          to: { height: \"}),(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'\"0\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\" }\"})]}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"        }\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"      },\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"      animation: {\"})}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'        \"accordion-down\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\": \"}),(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'\"accordion-down 0.2s ease-out\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\",\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'        \"accordion-up\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\": \"}),(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'\"accordion-up 0.2s ease-out\"'})]}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",\"data-highlighted-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"      }\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"    }\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"  }\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"};\"})})]})})]}),`\n`,(0,e.jsxs)(n.h2,{id:\"usage\",children:[(0,e.jsx)(n.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#usage\",children:(0,e.jsx)(n.span,{className:\"icon icon-link\"})}),\"Usage\"]}),`\n`,(0,e.jsx)(n.figure,{\"data-rehype-pretty-code-figure\":\"\",children:(0,e.jsx)(n.pre,{style:{backgroundColor:\"#22272e\",color:\"#adbac7\"},tabIndex:\"0\",\"data-language\":\"tsx\",\"data-theme\":\"github-dark-dimmed\",children:(0,e.jsxs)(n.code,{\"data-language\":\"tsx\",\"data-theme\":\"github-dark-dimmed\",style:{display:\"grid\"},children:[(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#F47067\"},children:\"import\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\" {\"})]}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"  Accordion,\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"  AccordionContent,\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"  AccordionItem,\"})}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"  AccordionTrigger\"})}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"} \"}),(0,e.jsx)(n.span,{style:{color:\"#F47067\"},children:\"from\"}),(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:' \"@/components/ui/accordion\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\";\"})]})]})})}),`\n`,(0,e.jsx)(n.figure,{\"data-rehype-pretty-code-figure\":\"\",children:(0,e.jsx)(n.pre,{style:{backgroundColor:\"#22272e\",color:\"#adbac7\"},tabIndex:\"0\",\"data-language\":\"tsx\",\"data-theme\":\"github-dark-dimmed\",children:(0,e.jsxs)(n.code,{\"data-language\":\"tsx\",\"data-theme\":\"github-dark-dimmed\",style:{display:\"grid\"},children:[(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"<\"}),(0,e.jsx)(n.span,{style:{color:\"#8DDB8C\"},children:\"Accordion\"}),(0,e.jsx)(n.span,{style:{color:\"#6CB6FF\"},children:\" type\"}),(0,e.jsx)(n.span,{style:{color:\"#F47067\"},children:\"=\"}),(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'\"single\"'}),(0,e.jsx)(n.span,{style:{color:\"#6CB6FF\"},children:\" collapsible\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\">\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"  <\"}),(0,e.jsx)(n.span,{style:{color:\"#8DDB8C\"},children:\"AccordionItem\"}),(0,e.jsx)(n.span,{style:{color:\"#6CB6FF\"},children:\" value\"}),(0,e.jsx)(n.span,{style:{color:\"#F47067\"},children:\"=\"}),(0,e.jsx)(n.span,{style:{color:\"#96D0FF\"},children:'\"item-1\"'}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\">\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"    <\"}),(0,e.jsx)(n.span,{style:{color:\"#8DDB8C\"},children:\"AccordionTrigger\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\">Is it accessible?</\"}),(0,e.jsx)(n.span,{style:{color:\"#8DDB8C\"},children:\"AccordionTrigger\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\">\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"    <\"}),(0,e.jsx)(n.span,{style:{color:\"#8DDB8C\"},children:\"AccordionContent\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\">\"})]}),`\n`,(0,e.jsx)(n.span,{\"data-line\":\"\",children:(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"      Yes. It adheres to the WAI-ARIA design pattern.\"})}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"    </\"}),(0,e.jsx)(n.span,{style:{color:\"#8DDB8C\"},children:\"AccordionContent\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\">\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"  </\"}),(0,e.jsx)(n.span,{style:{color:\"#8DDB8C\"},children:\"AccordionItem\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\">\"})]}),`\n`,(0,e.jsxs)(n.span,{\"data-line\":\"\",children:[(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\"</\"}),(0,e.jsx)(n.span,{style:{color:\"#8DDB8C\"},children:\"Accordion\"}),(0,e.jsx)(n.span,{style:{color:\"#ADBAC7\"},children:\">\"})]})]})})})]})}function h(l={}){let{wrapper:n}=l.components||{};return n?(0,e.jsx)(n,{...l,children:(0,e.jsx)(s,{...l})}):s(l)}return u(f);})();\n;return Component;"
+        },
+        "_id": "about/index.mdx",
+        "_raw": {
+          "sourceFilePath": "about/index.mdx",
+          "sourceFileName": "index.mdx",
+          "sourceFileDir": "about",
+          "contentType": "mdx",
+          "flattenedPath": "about"
+        },
+        "type": "Page",
+        "slug": "about",
+        "slugAsParams": "",
+        "url": "/posts/about"
+      },
+      "documentHash": "1738168989345",
+      "hasWarnings": false,
+      "documentTypeName": "Page"
+    }
+  }
+}
