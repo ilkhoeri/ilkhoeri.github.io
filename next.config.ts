@@ -2,6 +2,7 @@ import { withContentlayer } from "next-contentlayer2";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   reactStrictMode: true,
   experimental: {
     // appDir: true,
