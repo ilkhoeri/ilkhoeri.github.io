@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { allPages, Page } from "contentlayer/generated";
 import { getMDXComponent } from "next-contentlayer2/hooks";
@@ -31,8 +33,32 @@ interface SlugParams {
   params: Promise<{ app: string[] }>;
 }
 
-export async function generateStaticParams() {
-  return allPages.map(page => ({ slug: page._raw.flattenedPath }));
+// export async function generateStaticParams() {
+//   return allPages.map(page => ({ slug: page._raw.flattenedPath }));
+// }
+
+// For dynamic routes, you MUST implement generateStaticParams()
+export function generateStaticParams() {
+  // If you have dynamic segments, generate all possible paths
+  // For example, if you have a blog with known slugs:
+  return [
+    { app: [""] }, // Default/home route
+    { app: ["about"] },
+    { app: ["contact"] }
+    // Add all your known routes here
+  ];
+}
+
+// Alternatively, for catch-all routes, you can do:
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { app: [""] } },
+      { params: { app: ["about"] } },
+      { params: { app: ["contact"] } }
+    ],
+    fallback: false
+  };
 }
 
 async function getPathFromParams({ params }: SlugParams) {
