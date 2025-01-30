@@ -33,33 +33,33 @@ interface SlugParams {
   params: Promise<{ app: string[] }>;
 }
 
-// export async function generateStaticParams() {
-//   return allPages.map(page => ({ slug: page._raw.flattenedPath }));
-// }
+export async function generateStaticParams() {
+  return allPages.map(page => ({ app: [page._raw.flattenedPath] }));
+}
 
 // For dynamic routes, you MUST implement generateStaticParams()
-export function generateStaticParams() {
-  // If you have dynamic segments, generate all possible paths
-  // For example, if you have a blog with known slugs:
-  return [
-    { app: [""] }, // Default/home route
-    { app: ["about"] },
-    { app: ["contact"] }
-    // Add all your known routes here
-  ];
-}
+// export function generateStaticParams() {
+//   // If you have dynamic segments, generate all possible paths
+//   // For example, if you have a blog with known slugs:
+//   return [
+//     { app: [""] }, // Default/home route
+//     { app: ["about"] },
+//     { app: ["contact"] }
+//     // Add all your known routes here
+//   ];
+// }
 
 // Alternatively, for catch-all routes, you can do:
-export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { app: [""] } },
-      { params: { app: ["about"] } },
-      { params: { app: ["contact"] } }
-    ],
-    fallback: false
-  };
-}
+// export async function getStaticPaths() {
+//   return {
+//     paths: [
+//       { params: { app: [""] } },
+//       { params: { app: ["about"] } },
+//       { params: { app: ["contact"] } }
+//     ],
+//     fallback: false
+//   };
+// }
 
 async function getPathFromParams({ params }: SlugParams) {
   const slug = (await params).app?.join("/") || "";
@@ -89,11 +89,12 @@ export default async function Home({ params }: SlugParams) {
     compareDesc(new Date(a.date), new Date(b.date))
   );
 
-  // return (
-  //   <div className="max-w-xl py-8 mx-auto">
-  //     <h1 className="mb-8 text-3xl font-bold text-center">Next.js Example</h1>
-
-  //   </div>
+  // console.log(
+  //   allPages.map(page => [
+  //     {
+  //       app: page._raw.flattenedPath
+  //     }
+  //   ])
   // );
 
   if (!posts) {
