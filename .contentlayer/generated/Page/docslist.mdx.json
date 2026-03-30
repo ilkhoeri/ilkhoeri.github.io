@@ -1,0 +1,24 @@
+{
+  "title": "docslist",
+  "date": "2026-03-29T17:00:00.000Z",
+  "published": false,
+  "featured": false,
+  "component": false,
+  "toc": true,
+  "body": {
+    "raw": "\r\n## Docs List!\r\n",
+    "code": "var Component=(()=>{var m=Object.create;var a=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty;var _=(n,t)=>()=>(t||n((t={exports:{}}).exports,t),t.exports),j=(n,t)=>{for(var s in t)a(n,s,{get:t[s],enumerable:!0})},i=(n,t,s,c)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let o of u(t))!p.call(n,o)&&o!==s&&a(n,o,{get:()=>t[o],enumerable:!(c=x(t,o))||c.enumerable});return n};var D=(n,t,s)=>(s=n!=null?m(f(n)):{},i(t||!n||!n.__esModule?a(s,\"default\",{value:n,enumerable:!0}):s,n)),L=n=>i(a({},\"__esModule\",{value:!0}),n);var l=_((C,r)=>{r.exports=_jsx_runtime});var b={};j(b,{default:()=>h,frontmatter:()=>M});var e=D(l()),M={title:\"docslist\",date:\"2026-03-30\"};function d(n){let t={a:\"a\",h2:\"h2\",span:\"span\",...n.components};return(0,e.jsxs)(t.h2,{id:\"docs-list\",children:[(0,e.jsx)(t.a,{className:\"subheading-anchor\",\"aria-label\":\"Link to section\",href:\"#docs-list\",children:(0,e.jsx)(t.span,{className:\"icon icon-link\"})}),\"Docs List!\"]})}function h(n={}){let{wrapper:t}=n.components||{};return t?(0,e.jsx)(t,{...n,children:(0,e.jsx)(d,{...n})}):d(n)}return L(b);})();\n;return Component;"
+  },
+  "_id": "docslist.mdx",
+  "_raw": {
+    "sourceFilePath": "docslist.mdx",
+    "sourceFileName": "docslist.mdx",
+    "sourceFileDir": ".",
+    "contentType": "mdx",
+    "flattenedPath": "docslist"
+  },
+  "type": "Page",
+  "slug": "docslist",
+  "slugAsParams": "",
+  "url": "/docslist"
+}

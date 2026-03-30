@@ -5,8 +5,9 @@ import {
   FileTextIcon
 } from "@/components/icons";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export function HomeCompt() {
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <main className="mx-auto max-w-2xl px-6 py-24 sm:py-32">
@@ -128,5 +129,31 @@ export default function Home() {
         </footer>
       </main>
     </div>
+  );
+}
+
+interface CompProps {
+  href: string;
+  tit: string;
+  sub: string;
+  icon: React.ReactNode;
+}
+export function LinkList(props: CompProps) {
+  const { href, tit, sub, icon } = props;
+  return (
+    <Link
+      href={href}
+      className="group flex items-center justify-between border-b border-zinc-100 pb-4 transition-colors hover:border-zinc-300 dark:border-zinc-800 dark:hover:border-zinc-600">
+      <div className="flex items-center gap-4">
+        <span className="[&>svg]:size-5 text-zinc-400 transition-colors group-hover:text-black dark:group-hover:text-white">
+          {icon}
+        </span>
+        <div className="grid">
+          <span className="font-medium text-black dark:text-white">{tit}</span>
+          <span className="text-sm text-zinc-500">{sub}</span>
+        </div>
+      </div>
+      <ArrowUpRightIcon className="h-4 w-4 text-zinc-300 transition-all group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 dark:text-zinc-600 dark:group-hover:text-white" />
+    </Link>
   );
 }

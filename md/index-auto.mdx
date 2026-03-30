@@ -1,0 +1,87 @@
+---
+title: Index
+date: 2026-03-30
+---
+
+<div className="min-h-screen bg-white dark:bg-black">
+  <main className="mx-auto max-w-2xl px-6 py-24 sm:py-32">
+    <header className="mb-16">
+      <div className="flex items-center gap-3 mb-8">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black dark:bg-white">
+          <Code2Icon className="h-5 w-5 text-white dark:text-black" />
+        </div>
+        <span className="text-sm font-medium tracking-wide text-zinc-500 dark:text-zinc-400">
+          ilkhoeri
+        </span>
+      </div>
+      <h1 className="text-4xl font-semibold tracking-tight text-black dark:text-white sm:text-5xl">
+        Hello, World.
+      </h1>
+    </header>
+    <section className="mb-16">
+      <div className="text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
+        Selamat datang di dokumentasi dan koleksi proyek open-source saya. Di
+        sini Anda akan menemukan berbagai template, komponen, dan panduan untuk
+        membantu Anda membangun aplikasi web modern.
+      </div>
+    </section>
+    <section className="mb-16">
+      <h2 className="mb-6 text-xs font-medium uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+        Mulai dari sini
+      </h2>
+      <div className="space-y-4">
+<LinkList
+  href="https://ilkhoeri.github.io/docs"
+  tit="Documentation"
+  sub="Panduan lengkap dan referensi API"
+  icon={<FileTextIcon/>}
+/>
+<LinkList
+  href="https://oerilabs.vercel.app/"
+  tit="Templates"
+  sub="Koleksi template siap pakai"
+  icon={<BookOpenIcon/>}
+/>
+<LinkList
+  href="https://oerilabs.vercel.app/learn"
+  tit="Learning Center"
+  sub="Tutorial dan pembelajaran interaktif"
+  icon={<Code2Icon/>}
+/>
+      </div>
+    </section>
+    <section className="flex flex-col gap-3 sm:flex-row">
+      <a
+        href="https://github.com/ilkhoeri"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-black px-6 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200">
+        <img
+          alt="GitHub-wine logomark"
+          loading="lazy"
+          width="24"
+          height="24"
+          decoding="async"
+          data-nimg="1"
+          className="dark:invert"
+          style={{color:'transparent'}}
+          src="/github.svg"
+        />
+        GitHub
+      </a>
+      <a
+        href="https://ilkhoeri.github.io/docs"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex h-11 items-center justify-center rounded-full border border-zinc-200 px-6 text-sm font-medium text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900">
+        Lihat Dokumentasi
+      </a>
+    </section>
+    <footer className="mt-24 border-t border-zinc-100 pt-8 dark:border-zinc-800">
+      <div className="text-sm text-zinc-400 dark:text-zinc-500">
+        © ilkhoeri. Open source dengan ❤️
+      </div>
+    </footer>
+
+  </main>
+</div>
