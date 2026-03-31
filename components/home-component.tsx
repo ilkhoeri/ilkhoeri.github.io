@@ -65,13 +65,13 @@ export function HomeCompt() {
             />
             GitHub
           </Link>
-          <Link
+          {/* <Link
             href="https://ilkhoeri.github.io/me"
             target="_self"
             rel="noopener noreferrer"
             className="inline-flex h-11 items-center justify-center rounded-full border border-zinc-200 px-6 text-sm font-medium text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900">
             About Me
-          </Link>
+          </Link> */}
         </section>
 
         {/* Footer */}
@@ -97,13 +97,13 @@ const linklist = [
     tit: "Templates",
     sub: "Collection of ready-to-use templates",
     icon: <BookOpenIcon />
-  },
-  {
-    href: "https://oerilabs.vercel.app/learn/",
-    tit: "Learning Center",
-    sub: "Tutorials and interactive learning",
-    icon: <Code2Icon />
   }
+  // {
+  //   href: "https://oerilabs.vercel.app/learn/",
+  //   tit: "Learning Center",
+  //   sub: "Tutorials and interactive learning",
+  //   icon: <Code2Icon />
+  // }
 ];
 
 interface CompProps {
