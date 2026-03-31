@@ -3,12 +3,12 @@ import { getRepos } from "@/lib/get";
 
 const specialTags = "ilkhoeri";
 
-export default async function ProjectsPage() {
+export default async function TemplatesPage() {
   const repos = await getRepos();
 
   const projects = repos
     .filter((repo: any) => repo.topics && repo.topics.length > 0)
-    // .filter((repo: any) => repo.topics?.includes(specialTags))
+    .filter((repo: any) => repo.topics?.includes("templates"))
     .map((repo: any) => ({
       title: repo.name,
       description: repo.description || "No description",
@@ -19,9 +19,9 @@ export default async function ProjectsPage() {
 
   return (
     <ContentPage
-      title="Projects"
-      subtitle="A collection of my projects"
-      description="Explore the complete documentation for each open-source project available."
+      title="Templates"
+      subtitle="A templates of my collection"
+      description="Explore collection of ready-to-use templates"
       data={projects}
     />
   );

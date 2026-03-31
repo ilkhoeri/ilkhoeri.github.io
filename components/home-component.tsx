@@ -43,24 +43,9 @@ export function HomeCompt() {
           </h2>
 
           <div className="space-y-4">
-            <LinkList
-              href="https://ilkhoeri.github.io/docs/"
-              tit="Documentation"
-              sub="Complete guide and API reference"
-              icon={<FileTextIcon />}
-            />
-            <LinkList
-              href="https://oerilabs.vercel.app/"
-              tit="Templates"
-              sub="Collection of ready-to-use templates"
-              icon={<BookOpenIcon />}
-            />
-            <LinkList
-              href="https://oerilabs.vercel.app/learn/"
-              tit="Learning Center"
-              sub="Tutorials and interactive learning"
-              icon={<Code2Icon />}
-            />
+            {linklist.map(link => (
+              <LinkList key={link.href} {...link} />
+            ))}
           </div>
         </section>
 
@@ -99,6 +84,27 @@ export function HomeCompt() {
     </div>
   );
 }
+
+const linklist = [
+  {
+    href: "/projects/",
+    tit: "Projects",
+    sub: "Explore my projects and experiments",
+    icon: <FileTextIcon />
+  },
+  {
+    href: "/templates/",
+    tit: "Templates",
+    sub: "Collection of ready-to-use templates",
+    icon: <BookOpenIcon />
+  },
+  {
+    href: "https://oerilabs.vercel.app/learn/",
+    tit: "Learning Center",
+    sub: "Tutorials and interactive learning",
+    icon: <Code2Icon />
+  }
+];
 
 interface CompProps {
   href: string;
