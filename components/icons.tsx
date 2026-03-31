@@ -1,15 +1,15 @@
-interface IconProps {
+export interface IconProps {
   className?: string;
 }
 
-export function ArrowUpRightIcon({ className }: IconProps) {
+export function ArrowUpRightIcon(props: any) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      className={className}>
+      {...props}>
       <path
         fill="none"
         stroke="currentColor"
@@ -17,6 +17,26 @@ export function ArrowUpRightIcon({ className }: IconProps) {
         strokeLinejoin="round"
         strokeWidth="2"
         d="M17 7L7 17M8 7h9v9"
+      />
+    </svg>
+  );
+}
+
+export function ArrowLeftIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M5 12h14M5 12l6 6m-6-6l6-6"
       />
     </svg>
   );
@@ -96,6 +116,238 @@ export function GithubIcon({ className }: IconProps) {
   );
 }
 
-export function Icon({ className }: IconProps) {
+export function PackageIcon({ className }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      className={className}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2">
+        <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73zm1 .27V12" />
+        <path d="M3.29 7L12 12l8.71-5M7.5 4.27l9 5.15" />
+      </g>
+    </svg>
+  );
+}
+
+export function TerminalIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M12 19h8M4 17l6-6l-6-6"
+      />
+    </svg>
+  );
+}
+
+export function PaletteIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2">
+        <path d="M12 22a1 1 0 0 1 0-20a10 9 0 0 1 10 9a5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+        <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+        <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+        <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+        <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+      </g>
+    </svg>
+  );
+}
+
+export function LayerIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2">
+        <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+        <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+        <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+      </g>
+    </svg>
+  );
+}
+
+export function CompassIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2">
+        <path d="m12.99 6.74l1.93 3.44M19.136 12a10 10 0 0 1-14.271 0M21 21l-2.16-3.84M3 21l8.02-14.26" />
+        <circle cx="12" cy="5" r="2" />
+      </g>
+    </svg>
+  );
+}
+
+export function TemplateIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2">
+        <rect width="18" height="7" x="3" y="3" rx="1" />
+        <rect width="9" height="7" x="3" y="14" rx="1" />
+        <rect width="5" height="7" x="16" y="14" rx="1" />
+      </g>
+    </svg>
+  );
+}
+
+export function GridPlusIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3m13 7h6m-3 3v-6"
+      />
+    </svg>
+  );
+}
+
+export function NetworkIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2">
+        <rect width="6" height="6" x="16" y="16" rx="1" />
+        <rect width="6" height="6" x="2" y="16" rx="1" />
+        <rect width="6" height="6" x="9" y="2" rx="1" />
+        <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3m-7-4V8" />
+      </g>
+    </svg>
+  );
+}
+
+export function CombineIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2">
+        <path d="M14 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1m5-7a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1M7 15l3 3m-3 3l3-3H5a2 2 0 0 1-2-2v-2" />
+        <rect width="7" height="7" x="14" y="14" rx="1" />
+        <rect width="7" height="7" x="3" y="3" rx="1" />
+      </g>
+    </svg>
+  );
+}
+
+export function TurborepoIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      {...props}>
+      <g fill="currentColor" fillRule="evenodd" clipRule="evenodd">
+        <path d="M8.216 1.129a.73.73 0 0 1 .825-.622C12.693 1.032 15.5 4.187 15.5 8s-2.807 6.968-6.459 7.493a.732.732 0 0 1-.206-1.45c2.943-.424 5.207-2.969 5.207-6.043s-2.264-5.62-5.207-6.042a.73.73 0 0 1-.619-.83m-7.09 7.123a.73.73 0 0 1 .825.621c.133.933.476 1.797.98 2.544a.735.735 0 0 1-.196 1.018a.727.727 0 0 1-1.012-.196A7.55 7.55 0 0 1 .507 9.08a.73.73 0 0 1 .619-.828m2.353 4.94a.727.727 0 0 1 1.015-.181a6 6 0 0 0 2.32.984a.732.732 0 0 1-.274 1.439a7.5 7.5 0 0 1-2.88-1.222a.735.735 0 0 1-.181-1.02" />
+        <path d="M7.966 10.93A2.923 2.923 0 0 1 5.049 8a2.923 2.923 0 0 1 2.917-2.93A2.923 2.923 0 0 1 10.882 8a2.923 2.923 0 0 1-2.916 2.93m0 1.465c2.416 0 4.374-1.968 4.374-4.395s-1.958-4.395-4.374-4.395C5.549 3.605 3.59 5.573 3.59 8s1.958 4.395 4.375 4.395" />
+      </g>
+    </svg>
+  );
+}
+
+export function ForkIcon(props: any) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      {...props}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2">
+        <path d="M10 18a2 2 0 1 0 4 0a2 2 0 1 0-4 0M5 6a2 2 0 1 0 4 0a2 2 0 1 0-4 0m10 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0" />
+        <path d="M7 8v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V8m-5 4v4" />
+      </g>
+    </svg>
+  );
+}
+
+export function Icon(props: any) {
   return;
 }

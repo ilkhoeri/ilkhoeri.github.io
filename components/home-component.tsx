@@ -30,77 +30,45 @@ export function HomeCompt() {
         {/* Introduction */}
         <section className="mb-16">
           <p className="text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Selamat datang di dokumentasi dan koleksi proyek open-source saya.
-            Di sini Anda akan menemukan berbagai template, komponen, dan panduan
-            untuk membantu Anda membangun aplikasi web modern.
+            Welcome to my documentation and collection of open-source projects.
+            Here you'll find a variety of modules, templates, and guides to help
+            you build modern web applications.
           </p>
         </section>
 
         {/* Quick Links */}
         <section className="mb-16">
           <h2 className="mb-6 text-xs font-medium uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
-            Mulai dari sini
+            Start from here
           </h2>
 
           <div className="space-y-4">
-            <a
-              href="https://ilkhoeri.github.io/docs"
-              className="group flex items-center justify-between border-b border-zinc-100 pb-4 transition-colors hover:border-zinc-300 dark:border-zinc-800 dark:hover:border-zinc-600">
-              <div className="flex items-center gap-4">
-                <FileTextIcon className="h-5 w-5 text-zinc-400 transition-colors group-hover:text-black dark:group-hover:text-white" />
-                <div>
-                  <span className="font-medium text-black dark:text-white">
-                    Documentation
-                  </span>
-                  <p className="text-sm text-zinc-500">
-                    Panduan lengkap dan referensi API
-                  </p>
-                </div>
-              </div>
-              <ArrowUpRightIcon className="h-4 w-4 text-zinc-300 transition-all group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 dark:text-zinc-600 dark:group-hover:text-white" />
-            </a>
-
-            <a
+            <LinkList
+              href="https://ilkhoeri.github.io/docs/"
+              tit="Documentation"
+              sub="Complete guide and API reference"
+              icon={<FileTextIcon />}
+            />
+            <LinkList
               href="https://oerilabs.vercel.app/"
-              className="group flex items-center justify-between border-b border-zinc-100 pb-4 transition-colors hover:border-zinc-300 dark:border-zinc-800 dark:hover:border-zinc-600">
-              <div className="flex items-center gap-4">
-                <BookOpenIcon className="h-5 w-5 text-zinc-400 transition-colors group-hover:text-black dark:group-hover:text-white" />
-                <div>
-                  <span className="font-medium text-black dark:text-white">
-                    Templates
-                  </span>
-                  <p className="text-sm text-zinc-500">
-                    Koleksi template siap pakai
-                  </p>
-                </div>
-              </div>
-              <ArrowUpRightIcon className="h-4 w-4 text-zinc-300 transition-all group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 dark:text-zinc-600 dark:group-hover:text-white" />
-            </a>
-
-            <a
-              href="https://oerilabs.vercel.app/learn"
-              className="group flex items-center justify-between border-b border-zinc-100 pb-4 transition-colors hover:border-zinc-300 dark:border-zinc-800 dark:hover:border-zinc-600">
-              <div className="flex items-center gap-4">
-                <Code2Icon className="h-5 w-5 text-zinc-400 transition-colors group-hover:text-black dark:group-hover:text-white" />
-                <div>
-                  <span className="font-medium text-black dark:text-white">
-                    Learning Center
-                  </span>
-                  <p className="text-sm text-zinc-500">
-                    Tutorial dan pembelajaran interaktif
-                  </p>
-                </div>
-              </div>
-              <ArrowUpRightIcon className="h-4 w-4 text-zinc-300 transition-all group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 dark:text-zinc-600 dark:group-hover:text-white" />
-            </a>
+              tit="Templates"
+              sub="Collection of ready-to-use templates"
+              icon={<BookOpenIcon />}
+            />
+            <LinkList
+              href="https://oerilabs.vercel.app/learn/"
+              tit="Learning Center"
+              sub="Tutorials and interactive learning"
+              icon={<Code2Icon />}
+            />
           </div>
         </section>
 
         {/* CTA Buttons */}
         <section className="flex flex-col gap-3 sm:flex-row">
-          <a
+          <Link
             href="https://github.com/ilkhoeri"
-            target="_blank"
+            target="_self"
             rel="noopener noreferrer"
             className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-black px-6 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200">
             <Image
@@ -111,14 +79,14 @@ export function HomeCompt() {
               height={24}
             />
             GitHub
-          </a>
-          <a
-            href="https://ilkhoeri.github.io/docs"
-            target="_blank"
+          </Link>
+          <Link
+            href="https://ilkhoeri.github.io/me"
+            target="_self"
             rel="noopener noreferrer"
             className="inline-flex h-11 items-center justify-center rounded-full border border-zinc-200 px-6 text-sm font-medium text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900">
-            Lihat Dokumentasi
-          </a>
+            About Me
+          </Link>
         </section>
 
         {/* Footer */}
