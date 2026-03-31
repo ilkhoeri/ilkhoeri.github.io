@@ -4,6 +4,8 @@ import { getRepos } from "@/lib/get";
 
 const specialTags = "ilkhoeri";
 
+// export const dynamic = "force-dynamic"; // menandai halaman harus di-render di server runtime
+
 export default async function ProjectsPage() {
   const repos = await getRepos();
 

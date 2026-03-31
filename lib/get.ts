@@ -3,8 +3,8 @@ export async function getRepos() {
     headers: {
       Accept: "application/vnd.github+json"
     },
-    next: { revalidate: 60 }, // ISR (opsional)
-    cache: "no-store"
+    next: { revalidate: 60 } // ISR (opsional)
+    // cache: "no-store"
   });
 
   if (!res.ok) {
