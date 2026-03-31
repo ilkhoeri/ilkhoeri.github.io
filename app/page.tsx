@@ -33,16 +33,16 @@ interface SlugParams {
   params: Promise<{ app: string[] }>;
 }
 
-export async function generateStaticParams() {
-  return [
-    { app: [] }, // <-- root path
-    // ...allPages.map(page => ({ app: [page._raw.flattenedPath] }))
+// export async function generateStaticParams() {
+//   return [
+//     { app: [] }, // <-- root path
+//     // ...allPages.map(page => ({ app: [page._raw.flattenedPath] }))
 
-    ...allPages.map(page => ({
-      app: page._raw.flattenedPath.split("/") // untuk nested paths
-    }))
-  ];
-}
+//     ...allPages.map(page => ({
+//       app: page._raw.flattenedPath.split("/") // untuk nested paths
+//     }))
+//   ];
+// }
 
 // For dynamic routes, you MUST implement generateStaticParams()
 // export function generateStaticParams() {
