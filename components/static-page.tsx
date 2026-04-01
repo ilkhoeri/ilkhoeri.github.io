@@ -7,7 +7,6 @@ import { notFound } from "next/navigation";
 import { getTableOfContents } from "@/components/content/config";
 import { Mdx } from "@/components/content/mdx-component";
 import { compareDesc, format, parseISO } from "@/lib/dates";
-import { HomeCompt } from "@/components/component-home";
 
 function PostCard(post: Page) {
   const Content = getMDXComponent(post.body.code);
