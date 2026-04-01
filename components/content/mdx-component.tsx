@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import { cn } from "@/lib/utils";
-import { LinkList } from "@/components/home-component";
+import { LinkList } from "@/components/component-home";
 import * as Icon from "@/components/icons";
 
 const components = {

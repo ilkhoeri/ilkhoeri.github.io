@@ -1,0 +1,109 @@
+[
+  {
+    "name": "oeri",
+    "description": "Control every lock-in. Keep the power! The Good Choice for Development Application based on React, components server, hooks, and more functions.",
+    "url": "https://github.com/ilkhoeri/oeri",
+    "stargazerCount": 8,
+    "forkCount": 4,
+    "primaryLanguage": {
+      "name": "TypeScript",
+      "color": "#3178c6"
+    },
+    "topics": [
+      "straightforward-dependencies",
+      "components",
+      "lock-in",
+      "ui",
+      "ilkhoeri",
+      "react"
+    ]
+  },
+  {
+    "name": "xuxi",
+    "description": "A very useful function to build style configuration, API Response Combination, Complex API Serialization or other properties dynamically by simplifying flexible management based on runtime conditions.",
+    "url": "https://github.com/ilkhoeri/xuxi",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "TypeScript",
+      "color": "#3178c6"
+    },
+    "topics": [
+      "hooks",
+      "ilkhoeri",
+      "react",
+      "serialization",
+      "state",
+      "merge",
+      "utilities"
+    ]
+  },
+  {
+    "name": "postcss-composer",
+    "description": "A PostCSS plugin that provides composable utilities for styling components with custom themes, responsive units, and safe mixin-based variants — Made for scalable UI design.",
+    "url": "https://github.com/ilkhoeri/postcss-composer",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "TypeScript",
+      "color": "#3178c6"
+    },
+    "topics": [
+      "css",
+      "ilkhoeri",
+      "plugin",
+      "postcss",
+      "ui"
+    ]
+  },
+  {
+    "name": "coloride",
+    "description": "A hex generator utility to facilitate efficient determination of theme colors in development.",
+    "url": "https://github.com/ilkhoeri/coloride",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "Python",
+      "color": "#3572A5"
+    },
+    "topics": [
+      "color-scheme",
+      "colors",
+      "ilkhoeri",
+      "themes",
+      "ui"
+    ]
+  },
+  {
+    "name": "cache-cleaner",
+    "description": "Clean up cache files, trash, and build artifacts from application development using VS Code, Bun, Yarn, npm, etc.",
+    "url": "https://github.com/ilkhoeri/cache-cleaner",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "primaryLanguage": {
+      "name": "TypeScript",
+      "color": "#3178c6"
+    },
+    "topics": [
+      "cleaner",
+      "cli",
+      "ilkhoeri",
+      "tools"
+    ]
+  },
+  {
+    "name": "Next.js-Localization",
+    "description": "Changing displayed content based on the user’s preferred locale, or localization, is not something specific to Next.js. The patterns described below would work the same with any web application.",
+    "url": "https://github.com/ilkhoeri/Next.js-Localization",
+    "stargazerCount": 1,
+    "forkCount": 0,
+    "primaryLanguage": null,
+    "topics": [
+      "ilkhoeri",
+      "localization",
+      "nextjs",
+      "react",
+      "templates"
+    ]
+  }
+]

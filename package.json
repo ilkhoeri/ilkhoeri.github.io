@@ -4,9 +4,11 @@
   "description": "personal github pages",
   "private": true,
   "scripts": {
-    "dev": "npm run build:content && next dev --turbopack",
+    "dev": "bun run generate:public && bun run generate:pinned && bun run build:content && next dev --turbopack",
     "build": "npm run build:content && next build",
     "build:content": "contentlayer2 build",
+    "generate:pinned": "bun run scripts/generatePinned.ts",
+    "generate:public": "bun run scripts/generatePublicRepos.ts",
     "start": "next start",
     "lint": "next lint"
   },
@@ -29,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "mdast-util-toc": "^7.1.0",
+    "node-fetch": "^3.3.2",
     "postcss": "^8",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-pretty-code": "^0.14.0",

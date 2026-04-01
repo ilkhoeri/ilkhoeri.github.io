@@ -6,20 +6,22 @@ import {
   LayerIcon,
   NetworkIcon,
   PaletteIcon,
-  TemplateIcon,
+  PuzzleIcon,
   TerminalIcon,
-  TurborepoIcon
+  TurborepoIcon,
+  ZapIcon
 } from "@/components/icons";
 
 const iconGroups: [React.ComponentType, string[]][] = [
   [PaletteIcon, ["ui-components", "ui"]],
   [TerminalIcon, ["cli"]],
-  [CompassIcon, ["utilities"]],
-  [TemplateIcon, ["templates"]],
+  [CompassIcon, ["utilities", "utility"]],
+  [PuzzleIcon, ["templates", "template"]],
   [GridPlusIcon, ["icons"]],
-  [LayerIcon, ["layers"]],
+  [LayerIcon, ["layers", "layer"]],
   [NetworkIcon, ["workspace"]],
   [TurborepoIcon, ["turborepo"]],
+  [ZapIcon, ["variant", "variants", "api"]],
   [CombineIcon, ["merge", "string-merging", "mergedeep"]]
 ];
 

@@ -1,4 +1,4 @@
-import { ContentPage } from "@/components/content-component";
+import { ContentPage } from "@/components/component-content";
 import { PackageIcon } from "@/components/icons";
 
 export default function MePage() {

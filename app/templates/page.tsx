@@ -1,4 +1,4 @@
-import { ContentPage } from "@/components/content-component";
+import { ContentPage } from "@/components/component-content";
 import { getRepos } from "@/lib/get";
 
 const specialTags = "ilkhoeri";
@@ -14,7 +14,8 @@ export default async function TemplatesPage() {
       description: repo.description || "No description",
       href: repo.html_url,
       tags: repo.topics?.filter((tag: string) => tag !== specialTags) || [],
-      isFork: repo.fork
+      isFork: repo.fork,
+      homepage: repo.homepage
     }));
 
   return (
