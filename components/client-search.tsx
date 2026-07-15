@@ -70,7 +70,7 @@ export function useSearchProjects(projects: ProjectProps[]) {
   };
 }
 
-export function ContentWithSearchPage(props: ContentPageProps) {
+export function ContentWithSearchPage(props: ContentPageProps<true>) {
   const { title, description, subtitle, data } = props;
   const {
     filteredProjects,

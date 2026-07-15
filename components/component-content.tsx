@@ -25,13 +25,17 @@ export interface ProjectProps {
   languageColor?: string;
 }
 
-export interface ContentPageProps {
+type WithData<TD extends boolean = false> = [TD] extends [true]
+  ? { data: ProjectProps[] }
+  : [TD] extends [false]
+    ? { data?: ProjectProps[]; children?: React.ReactNode }
+    : unknown;
+
+export type ContentPageProps<TD extends boolean = false> = {
   title?: string;
   description?: string;
   subtitle?: string;
-  data?: ProjectProps[];
-  children?: React.ReactNode;
-}
+} & WithData<TD>;
 
 export function ContentPage(props: ContentPageProps) {
   const { title, description, subtitle, data, children } = props;
