@@ -14,8 +14,10 @@ import fs from "fs";
 import path from "path";
 
 export default async function HomeCompt() {
-  const filePath = path.join(process.cwd(), "public", "pinned.json");
-  const repos = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  const filePath = path.join(process.cwd(), "public/content", "pinned.json");
+  const repos = fs.existsSync(filePath)
+    ? JSON.parse(fs.readFileSync(filePath, "utf-8"))
+    : null;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
@@ -84,90 +86,95 @@ export default async function HomeCompt() {
         </section>
 
         {/* Pinned */}
-        <hr className="border-t-transparent mt-12" />
-        <div className="mx-auto max-w-5xl px-6 pt-12">
-          <h2 className="mb-4 text-xs font-medium tracking-widest text-zinc-400 dark:text-zinc-500">
-            Pinned
-          </h2>
-          <ul className="grid gap-4 sm:grid-cols-2">
-            {repos.map((repo: any) => {
-              const foot = [
-                {
-                  key: "language",
-                  text: repo?.primaryLanguage?.name,
-                  icon: (
-                    <CircleDotIcon
-                      className="size-3.5 mr-1"
-                      style={
-                        repo?.primaryLanguage?.color && {
-                          color: repo?.primaryLanguage?.color
-                        }
-                      }
-                    />
-                  )
-                },
-                {
-                  key: "starts",
-                  text: repo?.stargazerCount,
-                  icon: "⭐"
-                },
-                {
-                  key: "fork",
-                  text: repo?.forkCount,
-                  icon: <ForkIcon className="size-4 mr-1" />
-                }
-              ];
-              return (
-                <li
-                  key={repo.name}
-                  className="group relative flex flex-col rounded-lg border border-zinc-100 p-5 transition-all hover:border-zinc-300 hover:bg-zinc-50/50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50">
-                  <h3 className="mb-2 inline-flex flex-row items-center text-black dark:text-white">
-                    <BookMarkIcon className="mr-2 size-4 text-zinc-500 dark:text-zinc-400" />
-                    <Link
-                      href={repo.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-sm text-sky-700 dark:text-sky-500">
-                      {repo.name}
-                    </Link>
-                  </h3>
-                  <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
-                    {repo.description}
-                  </p>
 
-                  <p
-                    className={cnx(
-                      foot &&
-                        foot.length > 0 &&
-                        "flex flex-row items-center text-sm leading-relaxed text-zinc-500 dark:text-zinc-400"
-                    )}>
-                    {foot &&
-                      foot.length > 0 &&
-                      foot
-                        .filter(item => item?.text && item?.text !== "0")
-                        .map((item, idx) => {
-                          if (!item?.text) return null;
-                          if (!isNaN(Number(item?.text))) {
-                            if (Number(item?.text) === 0) return null;
+        {fs.existsSync(filePath) && (
+          <>
+            <hr className="border-t-transparent mt-12" />
+            <div className="mx-auto max-w-5xl px-6 pt-12">
+              <h2 className="mb-4 text-xs font-medium tracking-widest text-zinc-400 dark:text-zinc-500">
+                Pinned
+              </h2>
+              <ul className="grid gap-4 sm:grid-cols-2">
+                {repos.map((repo: any) => {
+                  const foot = [
+                    {
+                      key: "language",
+                      text: repo?.primaryLanguage?.name,
+                      icon: (
+                        <CircleDotIcon
+                          className="size-3.5 mr-1"
+                          style={
+                            repo?.primaryLanguage?.color && {
+                              color: repo?.primaryLanguage?.color
+                            }
                           }
-                          return (
-                            <span
-                              key={item.key}
-                              className={cnx(
-                                "flex flex-row items-center",
-                                idx !== 0 &&
-                                  "relative ml-4 before:absolute before:-left-2 before:top-1/2 before:-translate-y-1/2 before:content-['•']"
-                              )}>
-                              {item?.icon} {item?.text}
-                            </span>
-                          );
-                        })}
-                  </p>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+                        />
+                      )
+                    },
+                    {
+                      key: "starts",
+                      text: repo?.stargazerCount,
+                      icon: "⭐"
+                    },
+                    {
+                      key: "fork",
+                      text: repo?.forkCount,
+                      icon: <ForkIcon className="size-4 mr-1" />
+                    }
+                  ];
+                  return (
+                    <li
+                      key={repo.name}
+                      className="group relative flex flex-col rounded-lg border border-zinc-100 p-5 transition-all hover:border-zinc-300 hover:bg-zinc-50/50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50">
+                      <h3 className="mb-2 inline-flex flex-row items-center text-black dark:text-white">
+                        <BookMarkIcon className="mr-2 size-4 text-zinc-500 dark:text-zinc-400" />
+                        <Link
+                          href={repo.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-sm text-sky-700 dark:text-sky-500">
+                          {repo.name}
+                        </Link>
+                      </h3>
+                      <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+                        {repo.description}
+                      </p>
+
+                      <p
+                        className={cnx(
+                          foot &&
+                            foot.length > 0 &&
+                            "flex flex-row items-center text-sm leading-relaxed text-zinc-500 dark:text-zinc-400"
+                        )}>
+                        {foot &&
+                          foot.length > 0 &&
+                          foot
+                            .filter(item => item?.text && item?.text !== "0")
+                            .map((item, idx) => {
+                              if (!item?.text) return null;
+                              if (!isNaN(Number(item?.text))) {
+                                if (Number(item?.text) === 0) return null;
+                              }
+                              return (
+                                <span
+                                  key={item.key}
+                                  className={cnx(
+                                    "flex flex-row items-center",
+                                    idx !== 0 &&
+                                      "relative ml-4 before:absolute before:-left-2 before:top-1/2 before:-translate-y-1/2 before:content-['•']"
+                                  )}>
+                                  {item?.icon} {item?.text}
+                                </span>
+                              );
+                            })}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </>
+        )}
 
         {/* Footer */}
         <footer className="mt-24 border-t border-zinc-100 pt-8 dark:border-zinc-800">

@@ -50,7 +50,7 @@ async function main() {
   const data = await res.json();
 
   // transform data: map topics dan primaryLanguage
-  const repos = (data as any).data.user.pinnedItems.edges.map((edge: any) => {
+  const repos = (data as any)?.data.user.pinnedItems.edges.map((edge: any) => {
     const repo = edge.node;
     return {
       name: repo.name,
@@ -66,7 +66,7 @@ async function main() {
   });
 
   // simpan ke public folder supaya bisa diakses statis
-  const filePath = path.join(process.cwd(), "public", "pinned.json");
+  const filePath = path.join(process.cwd(), "public/content", "pinned.json");
   fs.writeFileSync(filePath, JSON.stringify(repos, null, 2));
   console.log("Pinned repos JSON generated at public/pinned.json");
 }

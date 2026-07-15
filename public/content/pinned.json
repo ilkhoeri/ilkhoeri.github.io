@@ -1,8 +1,8 @@
 [
   {
-    "name": "oeri",
+    "name": "ui",
     "description": "Control every lock-in. Keep the power! The Good Choice for Development Application based on React, components server, hooks, and more functions.",
-    "url": "https://github.com/ilkhoeri/oeri",
+    "url": "https://github.com/ilkhoeri/ui",
     "stargazerCount": 8,
     "forkCount": 4,
     "primaryLanguage": {
@@ -10,12 +10,13 @@
       "color": "#3178c6"
     },
     "topics": [
-      "straightforward-dependencies",
       "components",
       "lock-in",
       "ui",
       "ilkhoeri",
-      "react"
+      "react",
+      "modular",
+      "uikit"
     ]
   },
   {

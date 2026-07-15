@@ -10,7 +10,11 @@ async function main() {
   const repos = data;
 
   // Simpan ke public folder
-  const filePath = path.join(process.cwd(), "public", "publicRepos.json");
+  const filePath = path.join(
+    process.cwd(),
+    "public/content",
+    "publicRepos.json"
+  );
   fs.writeFileSync(filePath, JSON.stringify(repos, null, 2));
   console.log("Public repos JSON generated at public/publicRepos.json");
 }
