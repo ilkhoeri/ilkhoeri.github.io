@@ -64,7 +64,6 @@ export default async function HomeCompt() {
           <h2 className="mb-6 text-xs font-medium uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
             Start from here
           </h2>
-
           <div className="space-y-4">
             {linklist.map(link => (
               <LinkList key={link.href} {...link} />
@@ -74,7 +73,6 @@ export default async function HomeCompt() {
 
         {/* CTA Buttons */}
         <section className="flex flex-col gap-3 sm:flex-row">
-            <span className="font-mono text-sm font-medium">About Me</span>
           {actionsList.map(act => (
             <Link
               key={act.label}
