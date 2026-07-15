@@ -2,7 +2,10 @@ const specialTags = "ilkhoeri";
 
 export function filteredRepos(repos: any) {
   const projects = repos
-    .filter((repo: any) => repo.topics && repo.topics.length > 0)
+    .filter(
+      (repo: any) =>
+        repo.topics && repo.topics.length > 0 && repo.name !== specialTags
+    )
     // .filter((repo: any) => repo.topics?.includes(specialTags))
     .map((repo: any) => ({
       title: repo.name,

@@ -36,8 +36,8 @@ var LinksProperties = defineNestedType(() => ({
     }
   }
 }));
-var Page = defineDocumentType(() => ({
-  name: "Page",
+var md = defineDocumentType(() => ({
+  name: "md",
   filePathPattern: `**/*.mdx`,
   contentType: "mdx",
   fields: {
@@ -93,7 +93,7 @@ var Page = defineDocumentType(() => ({
 }));
 var contentlayer_config_default = makeSource({
   contentDirPath: "md",
-  documentTypes: [Page],
+  documentTypes: [md],
   mdx: {
     remarkPlugins: [remarkGfm, codeImport],
     rehypePlugins: [
@@ -181,4 +181,4 @@ export {
   computedFields,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-HRKINFET.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-CEW67P7J.mjs.map

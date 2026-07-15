@@ -1,13 +1,15 @@
 import fs from "fs";
 import fetch from "node-fetch";
 import path from "path";
+import { GENERATED_EXPORT_PATH } from "../routes";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const username = process.env.GITHUB_USERNAME;
 
 async function main() {
   const query = `
     query {
-      user(login: "ilkhoeri") {
+      user(login: "${username}") {
         pinnedItems(first: 6, types: REPOSITORY) {
           edges {
             node {
@@ -66,9 +68,15 @@ async function main() {
   });
 
   // simpan ke public folder supaya bisa diakses statis
-  const filePath = path.join(process.cwd(), "public/content", "pinned.json");
+  const filePath = path.join(
+    process.cwd(),
+    GENERATED_EXPORT_PATH,
+    "pinned.json"
+  );
   fs.writeFileSync(filePath, JSON.stringify(repos, null, 2));
-  console.log("Pinned repos JSON generated at public/pinned.json");
+  console.log(
+    `✨ Pinned repos JSON generated at ${GENERATED_EXPORT_PATH}/pinned.json`
+  );
 }
 
 main();

@@ -63,3 +63,41 @@ export async function fetchPinnedRepos() {
   const data = await res.json();
   return data.data.user.pinnedItems.edges.map((edge: any) => edge.node);
 }
+
+// ...
+async function filterContent(
+  content: string,
+  replace: Record<string, string>
+): Promise<string> {
+  const lines = content.split("\n");
+
+  const filteredLines = lines
+    .filter(
+      line =>
+        !line.includes("prettier-ignore") &&
+        !line.includes("import globalStyle") &&
+        !line.includes("className={globalStyle") &&
+        !line.includes("__set_props") &&
+        !line.includes("useSetProps") &&
+        !line.includes("SetProps")
+    )
+    .map(line => {
+      for (const [key, value] of Object.entries(replace)) {
+        const regex = new RegExp(`\\b${key}\\b`, "g");
+        line = line.replace(regex, value);
+      }
+      return line;
+    });
+
+  return filteredLines.join("\n").trimEnd();
+}
+
+export async function getRaw(
+  urlRaw: string,
+  lang: string = "js showLineNumbers"
+): Promise<string> {
+  const response = await fetch(urlRaw);
+  let text = await response.text();
+  text = await filterContent(text, {});
+  return `\`\`\`${lang}\n${text}\n\`\`\``.trimEnd();
+}

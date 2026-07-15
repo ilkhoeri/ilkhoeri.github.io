@@ -2,7 +2,30 @@ export interface IconProps {
   className?: string;
 }
 
-export function ArrowUpRightIcon(props: any) {
+interface SvgProps extends React.ComponentPropsWithRef<"svg"> {}
+
+export function HeartOutlineToneIcon(props: SvgProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="3"
+      {...props}>
+      <path d="M12 5.5C7.5.826 2 4.275 2 9.138s4.02 7.454 6.962 9.774C10 19.729 11 20.5 12 20.5" />
+      <path
+        d="M12 5.5C16.5.826 22 4.275 22 9.138s-4.02 7.454-6.962 9.774C14 19.729 13 20.5 12 20.5"
+        opacity=".5"
+      />
+    </svg>
+  );
+}
+
+export function ArrowUpRightIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +45,25 @@ export function ArrowUpRightIcon(props: any) {
   );
 }
 
-export function ArrowLeftIcon(props: any) {
+export function InfoCircleIcon(props: SvgProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      {...props}>
+      <path
+        fillRule="evenodd"
+        d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m-.5 5a1 1 0 1 0 0 2h.5a1 1 0 1 0 0-2zM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+export function ArrowLeftIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +143,7 @@ export function Code2Icon({ className }: IconProps) {
   );
 }
 
-export function GithubIcon({ className }: IconProps) {
+export function GithubIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -110,13 +151,13 @@ export function GithubIcon({ className }: IconProps) {
       fill="currentColor"
       stroke="none"
       strokeWidth="0"
-      className={className}>
+      {...props}>
       <path d="m12.01,1C5.92,1,1,5.96,1,12.09c0,4.9,3.15,9.05,7.53,10.52.55.11.75-.24.75-.53,0-.26-.02-1.14-.02-2.06-3.06.66-3.7-1.32-3.7-1.32-.49-1.29-1.22-1.62-1.22-1.62-1-.68.07-.68.07-.68,1.11.07,1.7,1.14,1.7,1.14.98,1.69,2.57,1.21,3.21.92.09-.72.38-1.21.69-1.49-2.44-.26-5.01-1.21-5.01-5.47,0-1.21.44-2.2,1.13-2.97-.11-.28-.49-1.41.11-2.94,0,0,.93-.29,3.03,1.14.9-.24,1.82-.37,2.75-.37.93,0,1.88.13,2.75.37,2.1-1.43,3.03-1.14,3.03-1.14.6,1.52.22,2.66.11,2.94.71.77,1.13,1.76,1.13,2.97,0,4.26-2.57,5.2-5.03,5.47.4.35.75,1.01.75,2.06,0,1.49-.02,2.68-.02,3.05,0,.29.2.64.75.53,4.37-1.47,7.53-5.62,7.53-10.52.02-6.13-4.92-11.09-10.99-11.09Z" />
     </svg>
   );
 }
 
-export function NpmIcon(props: any) {
+export function NpmIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +194,7 @@ export function PackageIcon({ className }: IconProps) {
   );
 }
 
-export function TerminalIcon(props: any) {
+export function TerminalIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +214,7 @@ export function TerminalIcon(props: any) {
   );
 }
 
-export function PaletteIcon(props: any) {
+export function PaletteIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +238,7 @@ export function PaletteIcon(props: any) {
   );
 }
 
-export function LayerIcon(props: any) {
+export function LayerIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -219,7 +260,7 @@ export function LayerIcon(props: any) {
   );
 }
 
-export function CompassIcon(props: any) {
+export function CompassIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -240,29 +281,7 @@ export function CompassIcon(props: any) {
   );
 }
 
-export function TemplateIcon(props: any) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      {...props}>
-      <g
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2">
-        <rect width="18" height="7" x="3" y="3" rx="1" />
-        <rect width="9" height="7" x="3" y="14" rx="1" />
-        <rect width="5" height="7" x="16" y="14" rx="1" />
-      </g>
-    </svg>
-  );
-}
-
-export function GridPlusIcon(props: any) {
+export function GridPlusIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -282,7 +301,7 @@ export function GridPlusIcon(props: any) {
   );
 }
 
-export function NetworkIcon(props: any) {
+export function NetworkIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -305,7 +324,7 @@ export function NetworkIcon(props: any) {
   );
 }
 
-export function CombineIcon(props: any) {
+export function CombineIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -327,7 +346,7 @@ export function CombineIcon(props: any) {
   );
 }
 
-export function TurborepoIcon(props: any) {
+export function TurborepoIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -343,7 +362,7 @@ export function TurborepoIcon(props: any) {
   );
 }
 
-export function ForkIcon(props: any) {
+export function ForkIcon(props: SvgProps) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <g fill="none" stroke="currentColor" strokeWidth="2">
@@ -374,7 +393,7 @@ export function ForkIcon(props: any) {
   );
 }
 
-export function BlueprintHelmetIcon(props: any) {
+export function BlueprintHelmetIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -395,7 +414,7 @@ export function BlueprintHelmetIcon(props: any) {
   );
 }
 
-export function SearchIcon(props: any) {
+export function SearchIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -416,7 +435,7 @@ export function SearchIcon(props: any) {
   );
 }
 
-export function XMarkIcon(props: any) {
+export function XMarkIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -436,7 +455,7 @@ export function XMarkIcon(props: any) {
   );
 }
 
-export function ZapIcon(props: any) {
+export function ZapIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -456,7 +475,7 @@ export function ZapIcon(props: any) {
   );
 }
 
-export function PuzzleIcon(props: any) {
+export function PuzzleIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -476,7 +495,7 @@ export function PuzzleIcon(props: any) {
   );
 }
 
-export function BookMarkIcon(props: any) {
+export function BookMarkIcon(props: SvgProps) {
   return (
     <svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" {...props}>
       <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
@@ -484,7 +503,7 @@ export function BookMarkIcon(props: any) {
   );
 }
 
-export function CircleDotIcon(props: any) {
+export function CircleDotIcon(props: SvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -500,7 +519,7 @@ export function CircleDotIcon(props: any) {
   );
 }
 
-export function ScalesLawIcon(props: any) {
+export function ScalesLawIcon(props: SvgProps) {
   return (
     <svg aria-hidden="true" viewBox="0 0 16 16" {...props}>
       <path
@@ -508,8 +527,4 @@ export function ScalesLawIcon(props: any) {
         d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z"></path>
     </svg>
   );
-}
-
-export function Icon(props: any) {
-  return;
 }

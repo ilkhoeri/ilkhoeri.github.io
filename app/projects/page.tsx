@@ -1,14 +1,13 @@
 import fs from "fs";
 import path from "path";
-import { ContentWithSearchPage } from "@/components/client-search";
+import { GENERATED_EXPORT_PATH } from "@/routes";
 import { filteredRepos } from "@/lib/filter-projects";
-
-const specialTags = "ilkhoeri";
+import { ContentWithSearchPage } from "@/components/client-search";
 
 export default function ProjectsPageClient() {
   const publicPath = path.join(
     process.cwd(),
-    "public/content",
+    GENERATED_EXPORT_PATH,
     "publicRepos.json"
   );
 
@@ -34,8 +33,8 @@ export default function ProjectsPageClient() {
   return (
     <ContentWithSearchPage
       title="Projects"
-      subtitle="A collection of my projects"
       description="Explore the complete documentation for each open-source project available."
+      subtitle="A collection of my projects"
       data={projects}
     />
   );

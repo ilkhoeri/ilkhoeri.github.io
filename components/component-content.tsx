@@ -29,11 +29,12 @@ export interface ContentPageProps {
   title?: string;
   description?: string;
   subtitle?: string;
-  data: ProjectProps[];
+  data?: ProjectProps[];
+  children?: React.ReactNode;
 }
 
 export function ContentPage(props: ContentPageProps) {
-  const { title, description, subtitle, data } = props;
+  const { title, description, subtitle, data, children } = props;
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <main className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
@@ -73,11 +74,15 @@ export function ContentPage(props: ContentPageProps) {
             </h2>
           )}
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {data?.map(d => {
-              return <ContentCard key={d.title} {...d} />;
-            })}
-          </div>
+          {data ? (
+            <div className="grid gap-4 sm:grid-cols-2">
+              {data?.map(d => {
+                return <ContentCard key={d.title} {...d} />;
+              })}
+            </div>
+          ) : (
+            children
+          )}
         </section>
 
         {/* Additional Resources */}
@@ -91,7 +96,7 @@ export function ContentPage(props: ContentPageProps) {
 
 const resources = [
   {
-    name: "Repository GitHub",
+    name: "GitHub Repository",
     href: "https://github.com/ilkhoeri?tab=repositories"
   },
   {
@@ -100,7 +105,7 @@ const resources = [
   },
   {
     name: "Learning Center",
-    href: "https://oerilabs.vercel.app/learn"
+    href: "https://ilkhoeri.github.io/learn"
   }
 ];
 
@@ -113,13 +118,13 @@ export function AdditionalResources({
   }[];
 }) {
   return (
-    <section className="rounded-lg border border-zinc-100 p-6 dark:border-zinc-800">
+    <section className="rounded-xl border border-zinc-100 p-6 dark:border-zinc-800">
       <h2 className="mb-4 text-sm font-semibold text-black dark:text-white">
         Additional Resources
       </h2>
       <ul className="space-y-3">
         {rsc.map(r => (
-          <AddList key={r.name} name={r.name} href={r.href} />
+          <AdditionalList key={r.name} name={r.name} href={r.href} />
         ))}
       </ul>
     </section>
@@ -153,15 +158,15 @@ export function ContentCard(p: ProjectProps & { selectedTags?: string[] }) {
     }
   ];
   return (
-    <div className="group relative flex flex-col rounded-lg border border-zinc-100 p-5 transition-all hover:border-zinc-300 hover:bg-zinc-50/50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50">
+    <div className="group relative flex flex-col rounded-xl border border-zinc-100 p-5 transition-all hover:border-zinc-300 hover:bg-zinc-50/50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50">
       <div className="mb-4 gap-3 flex items-start justify-between">
         <div
           className={cnx(
             "size-10 rounded-lg",
             Icon &&
-              "flex items-center justify-center bg-zinc-100 transition-colors group-hover:bg-zinc-200 dark:bg-zinc-800 dark:group-hover:bg-zinc-700"
+              "flex items-center justify-center bg-zinc-100 transition-colors duration-300 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 group-hover:bg-black group-hover:dark:bg-white group-hover:text-white group-hover:dark:text-black"
           )}>
-          {Icon && <Icon className="size-5 text-zinc-600 dark:text-zinc-400" />}
+          {Icon && <Icon className="size-5 transition-colors duration-300" />}
         </div>
         {links.map(link => {
           if (!p.href) return null;
@@ -182,8 +187,11 @@ export function ContentCard(p: ProjectProps & { selectedTags?: string[] }) {
           <span
             aria-label={p.license}
             title={p.license}
-            className="rounded-full ml-2">
+            className="rounded-full ml-2 inline-flex items-center gap-1">
             <ScalesLawIcon className="size-3.5 text-zinc-800 dark:text-zinc-300" />
+            <span className="opacity-45 text-xs">
+              {p.license?.replace(/\s+|\blicense\b/gi, "")}
+            </span>
           </span>
         )}
       </div>
@@ -243,14 +251,14 @@ function Snap({
   );
 }
 
-function AddList({ name, href }: { name: string; href: string }) {
+function AdditionalList({ name, href }: { name: string; href: string }) {
   return (
     <li>
       <Link
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex items-center justify-between text-sm text-zinc-600 transition-colors hover:text-black dark:text-zinc-400 dark:hover:text-white">
+        className="group flex items-center justify-between w-max text-sm text-zinc-600 transition-colors hover:text-black dark:text-zinc-400 dark:hover:text-white">
         <span>{name}</span>
         <ArrowUpRightIcon className="h-3.5 w-3.5 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </Link>

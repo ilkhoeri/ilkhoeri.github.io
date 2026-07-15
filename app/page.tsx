@@ -1,3 +1,8 @@
+import fs from "fs";
+import path from "path";
+import { cnx } from "xuxi";
+import Link from "next/link";
+import { GENERATED_EXPORT_PATH } from "@/routes";
 import {
   ArrowUpRightIcon,
   BlueprintHelmetIcon,
@@ -5,16 +10,18 @@ import {
   BookOpenIcon,
   CircleDotIcon,
   Code2Icon,
-  ForkIcon
+  ForkIcon,
+  GithubIcon,
+  HeartOutlineToneIcon,
+  InfoCircleIcon
 } from "@/components/icons";
-import Image from "next/image";
-import Link from "next/link";
-import { cnx } from "xuxi";
-import fs from "fs";
-import path from "path";
 
 export default async function HomeCompt() {
-  const filePath = path.join(process.cwd(), "public/content", "pinned.json");
+  const filePath = path.join(
+    process.cwd(),
+    GENERATED_EXPORT_PATH,
+    "pinned.json"
+  );
   const repos = fs.existsSync(filePath)
     ? JSON.parse(fs.readFileSync(filePath, "utf-8"))
     : null;
@@ -25,16 +32,21 @@ export default async function HomeCompt() {
         {/* Header */}
         <header className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black dark:bg-white">
+            <Link
+              href={"/me"}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-black dark:bg-white focus-visible:[outline:none] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-black focus-visible:ring-purple-800/80">
               <Code2Icon className="h-5 w-5 text-white dark:text-black" />
-            </div>
+            </Link>
             <span className="text-sm font-medium tracking-wide text-zinc-500 dark:text-zinc-400">
               ilkhoeri
             </span>
           </div>
 
-          <h1 className="text-4xl font-semibold tracking-tight text-black dark:text-white sm:text-5xl">
-            Hello, World.
+          <h1 className="text-4xl font-extralight font-google-sans-flex tracking-tight text-black dark:text-white sm:text-5xl">
+            Hello,{" "}
+            <span className="font-medium">
+              <strong>World!</strong>
+            </span>
           </h1>
         </header>
 
@@ -66,23 +78,26 @@ export default async function HomeCompt() {
             href="https://github.com/ilkhoeri"
             target="_self"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-black px-6 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200">
-            <Image
-              className="dark:invert"
-              src="/github.svg"
-              alt="GitHub-wine logomark"
-              width={24}
-              height={24}
-            />
-            GitHub
+            className="relative inline-flex items-center justify-center gap-2 h-11 py-0 px-6 rounded-full cursor-pointer select-none border w-max bg-black text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200">
+            <GithubIcon className="text-black size-6" />
+            <span className="font-mono text-sm font-medium">GitHub</span>
           </Link>
-          {/* <Link
-            href="https://ilkhoeri.github.io/me"
+          <Link
+            href="https://github.com/sponsors/ilkhoeri?o=esb"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="relative inline-flex items-center justify-center gap-2 h-11 py-0 px-6 rounded-full cursor-pointer select-none border w-max text-[#f0f6fc] fill-[#9198a1] bg-[#212830] border-[#3d444d]">
+            <HeartOutlineToneIcon className="text-[#db61a2] size-6" />
+            <span className="font-mono text-sm font-medium">Sponsor</span>
+          </Link>
+          <Link
+            href="/me"
             target="_self"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center justify-center rounded-full border border-zinc-200 px-6 text-sm font-medium text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900">
-            About Me
-          </Link> */}
+            className="relative inline-flex items-center justify-center gap-2 h-11 py-0 px-6 rounded-full cursor-pointer select-none border w-max border-zinc-200 text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900">
+            <InfoCircleIcon className="size-6" />
+            <span className="font-mono text-sm font-medium">About Me</span>
+          </Link>
         </section>
 
         {/* Pinned */}
@@ -91,7 +106,7 @@ export default async function HomeCompt() {
           <>
             <hr className="border-t-transparent mt-12" />
             <div className="mx-auto max-w-5xl px-6 pt-12">
-              <h2 className="mb-4 text-xs font-medium tracking-widest text-zinc-400 dark:text-zinc-500">
+              <h2 className="mb-4 text-sm font-medium tracking-normal text-zinc-400 dark:text-zinc-500">
                 Pinned
               </h2>
               <ul className="grid gap-4 sm:grid-cols-2">

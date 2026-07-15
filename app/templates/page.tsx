@@ -1,16 +1,13 @@
 import fs from "fs";
 import path from "path";
-import { ContentWithSearchPage } from "@/components/client-search";
-import { ContentPage } from "@/components/component-content";
+import { GENERATED_EXPORT_PATH } from "@/routes";
 import { filteredRepos } from "@/lib/filter-projects";
-import { getRepos } from "@/lib/get";
-
-const specialTags = "ilkhoeri";
+import { ContentPage } from "@/components/component-content";
 
 export default async function TemplatesPage() {
   const publicPath = path.join(
     process.cwd(),
-    "public/content",
+    GENERATED_EXPORT_PATH,
     "publicRepos.json"
   );
 
@@ -29,13 +26,11 @@ export default async function TemplatesPage() {
   );
 
   return (
-    <>
-      <ContentPage
-        title="Templates"
-        subtitle="A templates of my collection"
-        description="Explore collection of ready-to-use templates"
-        data={projects}
-      />
-    </>
+    <ContentPage
+      title="Templates"
+      description="Explore collection of ready-to-use templates"
+      subtitle="A templates of my collection"
+      data={projects}
+    />
   );
 }

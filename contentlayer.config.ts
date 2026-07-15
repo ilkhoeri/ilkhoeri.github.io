@@ -40,8 +40,8 @@ const LinksProperties = defineNestedType(() => ({
   }
 }));
 
-const Page = defineDocumentType(() => ({
-  name: "Page",
+const md = defineDocumentType(() => ({
+  name: "md",
   filePathPattern: `**/*.mdx`,
   contentType: "mdx",
   fields: {
@@ -98,7 +98,7 @@ const Page = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "md",
-  documentTypes: [Page],
+  documentTypes: [md],
   mdx: {
     remarkPlugins: [remarkGfm, codeImport],
     rehypePlugins: [
