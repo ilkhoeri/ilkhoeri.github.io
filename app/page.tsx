@@ -15,7 +15,6 @@ import {
   HeartOutlineToneIcon,
   InfoCircleIcon
 } from "@/components/icons";
-import { cn } from "@/lib/utils";
 
 export default async function HomeCompt() {
   const filePath = path.join(
@@ -75,39 +74,18 @@ export default async function HomeCompt() {
 
         {/* CTA Buttons */}
         <section className="flex flex-col gap-3 sm:flex-row">
-          <Link
-            href="https://github.com/ilkhoeri"
-            target="_self"
-            rel="noopener noreferrer"
-            className={cn(
-              classes({ s: "button-icon-left" }),
-              "bg-black text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
-            )}>
-            <GithubIcon className="text-black size-6" />
-            <span className="font-mono text-sm font-medium">GitHub</span>
-          </Link>
-          <Link
-            href="https://github.com/sponsors/ilkhoeri?o=esb"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className={cn(
-              classes({ s: "button-icon-left" }),
-              "text-[#f0f6fc] fill-[#9198a1] bg-[#212830] border-[#3d444d]"
-            )}>
-            <HeartOutlineToneIcon className="text-[#db61a2] size-6" />
-            <span className="font-mono text-sm font-medium">Sponsor</span>
-          </Link>
-          <Link
-            href="/me"
-            target="_self"
-            rel="noopener noreferrer"
-            className={cn(
-              classes({ s: "button-icon-left" }),
-              "border-zinc-200 text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900"
-            )}>
-            <InfoCircleIcon className="size-6" />
             <span className="font-mono text-sm font-medium">About Me</span>
-          </Link>
+          {actionsList.map(act => (
+            <Link
+              key={act.label}
+              href={act.href}
+              target={act.target}
+              rel="noopener noreferrer nofollow"
+              className={classes({ s: "button-icon-left", color: act.color })}>
+              {act.icon}
+              <span className="font-mono text-sm font-medium">{act.label}</span>
+            </Link>
+          ))}
         </section>
 
         {/* Pinned */}
@@ -212,6 +190,30 @@ export default async function HomeCompt() {
   );
 }
 
+const actionsList = [
+  {
+    href: "https://github.com/ilkhoeri",
+    label: "GitHub",
+    icon: <GithubIcon className="text-black size-6" />,
+    target: "_self" as const,
+    color: "contrast" as const
+  },
+  {
+    href: "/me",
+    label: "About Me",
+    icon: <InfoCircleIcon className="size-6" />,
+    target: "_self" as const,
+    color: "theme" as const
+  },
+  {
+    href: "https://github.com/sponsors/ilkhoeri?o=esb",
+    label: "Sponsor",
+    icon: <HeartOutlineToneIcon className="text-[#db61a2] size-6" />,
+    target: "_blank" as const,
+    color: "slate" as const
+  }
+];
+
 const linklist = [
   {
     href: "/projects/",
@@ -264,6 +266,13 @@ const classes = cvx({
     s: {
       "button-icon-left":
         "relative inline-flex items-center justify-center gap-2 h-11 py-0 pl-3 pr-4 rounded-full cursor-pointer select-none border w-full sm:w-max"
+    },
+    color: {
+      contrast:
+        "bg-black text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200",
+      theme:
+        "border-zinc-200 text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900",
+      slate: "text-[#f0f6fc] fill-[#9198a1] bg-[#212830] border-[#3d444d]"
     }
   }
 });
