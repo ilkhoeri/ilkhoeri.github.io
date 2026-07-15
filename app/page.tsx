@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { cnx } from "xuxi";
+import { cnx, cvx } from "xuxi";
 import Link from "next/link";
 import { GENERATED_EXPORT_PATH } from "@/routes";
 import {
@@ -15,6 +15,7 @@ import {
   HeartOutlineToneIcon,
   InfoCircleIcon
 } from "@/components/icons";
+import { cn } from "@/lib/utils";
 
 export default async function HomeCompt() {
   const filePath = path.join(
@@ -78,7 +79,10 @@ export default async function HomeCompt() {
             href="https://github.com/ilkhoeri"
             target="_self"
             rel="noopener noreferrer"
-            className="relative inline-flex items-center justify-center gap-2 h-11 py-0 px-6 rounded-full cursor-pointer select-none border w-max bg-black text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200">
+            className={cn(
+              classes({ s: "button-icon-left" }),
+              "bg-black text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
+            )}>
             <GithubIcon className="text-black size-6" />
             <span className="font-mono text-sm font-medium">GitHub</span>
           </Link>
@@ -86,7 +90,10 @@ export default async function HomeCompt() {
             href="https://github.com/sponsors/ilkhoeri?o=esb"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            className="relative inline-flex items-center justify-center gap-2 h-11 py-0 px-6 rounded-full cursor-pointer select-none border w-max text-[#f0f6fc] fill-[#9198a1] bg-[#212830] border-[#3d444d]">
+            className={cn(
+              classes({ s: "button-icon-left" }),
+              "text-[#f0f6fc] fill-[#9198a1] bg-[#212830] border-[#3d444d]"
+            )}>
             <HeartOutlineToneIcon className="text-[#db61a2] size-6" />
             <span className="font-mono text-sm font-medium">Sponsor</span>
           </Link>
@@ -94,7 +101,10 @@ export default async function HomeCompt() {
             href="/me"
             target="_self"
             rel="noopener noreferrer"
-            className="relative inline-flex items-center justify-center gap-2 h-11 py-0 px-6 rounded-full cursor-pointer select-none border w-max border-zinc-200 text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900">
+            className={cn(
+              classes({ s: "button-icon-left" }),
+              "border-zinc-200 text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900"
+            )}>
             <InfoCircleIcon className="size-6" />
             <span className="font-mono text-sm font-medium">About Me</span>
           </Link>
@@ -248,3 +258,12 @@ export function LinkList(props: CompProps) {
     </Link>
   );
 }
+
+const classes = cvx({
+  variants: {
+    s: {
+      "button-icon-left":
+        "relative inline-flex items-center justify-center gap-2 h-11 py-0 pl-3 pr-4 rounded-full cursor-pointer select-none border w-full sm:w-max"
+    }
+  }
+});
