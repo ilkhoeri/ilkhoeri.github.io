@@ -176,8 +176,8 @@ export function ContentCard(p: ProjectProps & { selectedTopics?: string[] }) {
   ];
   const isExperiment = p.topics?.some(t => t === "experimental");
   return (
-    <div className="group/card relative">
-      <div className="group relative flex flex-col rounded-xl border border-zinc-100 p-5 transition-all hover:border-zinc-300 hover:bg-zinc-50/50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50">
+    <div className="group relative">
+      <div className="flex flex-col rounded-xl border border-zinc-100 p-5 transition-all hover:border-zinc-300 hover:bg-zinc-50/50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50">
         <div className="mb-4 inline-flex items-center">
           <span
             className={cnx(
@@ -231,7 +231,7 @@ export function ContentCard(p: ProjectProps & { selectedTopics?: string[] }) {
         <TimeInline label="Created" date={p.createdAt} />
       </div>
 
-      <div className="absolute right-5 top-5 inline-flex items-center gap-3 justify-end">
+      <div className="absolute z-9 right-5 top-5 inline-flex items-center gap-3 justify-end">
         {links.map(link => (
           <Snap key={link.title} {...link} />
         ))}
@@ -252,9 +252,9 @@ function Snap({ href, icon: Icon, title, isTranslate }: SnapLink) {
       className={cnx(
         "rounded-full p-0.75 first-of-type:ml-auto cursor-pointer hover:invert bg-zinc-100 dark:bg-zinc-800",
         isTranslate &&
-          "[&>svg]:group-hover/card:translate-x-0.5 [&>svg]:group-hover/card:-translate-y-0.5"
+          "[&>svg]:group-hover:translate-x-0.5 [&>svg]:group-hover:-translate-y-0.5"
       )}>
-      <Icon className="size-5 text-zinc-300 transition-all group-hover/card:text-black dark:text-zinc-600 dark:group-hover/card:text-white" />
+      <Icon className="size-5 text-zinc-300 transition-all group-hover:text-black dark:text-zinc-600 dark:group-hover:text-white" />
     </Link>
   );
 }
