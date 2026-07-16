@@ -24,10 +24,10 @@ import { cn } from "@/lib/utils";
 
 export function useSearchProjects(projects: ProjectProps[]) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
 
   // Extract all unique tags
-  const allTags = Array.from(new Set(projects.flatMap(p => p.tags))).sort();
+  const allTopics = Array.from(new Set(projects.flatMap(p => p.topics))).sort();
 
   const filteredProjects = useMemo(() => {
     return projects?.filter(project => {
@@ -36,35 +36,35 @@ export function useSearchProjects(projects: ProjectProps[]) {
         project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         project.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-      const tags = project.tags || [];
-      const matchesTags =
-        selectedTags.length === 0 ||
-        selectedTags.some(tag => tags?.includes(tag));
+      const topics = project.topics || [];
+      const matchesTopics =
+        selectedTopics.length === 0 ||
+        selectedTopics.some(tag => topics?.includes(tag));
 
-      return matchesSearch && matchesTags;
+      return matchesSearch && matchesTopics;
     });
-  }, [searchQuery, selectedTags]);
+  }, [searchQuery, selectedTopics]);
 
-  const toggleTag = (tag: string) => {
-    setSelectedTags(prev =>
+  const toggleTopic = (tag: string) => {
+    setSelectedTopics(prev =>
       prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
     );
   };
 
   const clearFilters = () => {
     setSearchQuery("");
-    setSelectedTags([]);
+    setSelectedTopics([]);
   };
 
-  const hasActiveFilters = searchQuery !== "" || selectedTags.length > 0;
+  const hasActiveFilters = searchQuery !== "" || selectedTopics.length > 0;
 
   return {
     searchQuery,
     setSearchQuery,
-    allTags,
-    selectedTags,
+    allTopics,
+    selectedTopics,
     filteredProjects,
-    toggleTag,
+    toggleTopic,
     clearFilters,
     hasActiveFilters
   };
@@ -74,12 +74,12 @@ export function ContentWithSearchPage(props: ContentPageProps<true>) {
   const { title, description, subtitle, data } = props;
   const {
     filteredProjects,
-    toggleTag,
+    toggleTopic,
     clearFilters,
     hasActiveFilters,
-    allTags,
+    allTopics,
     searchQuery,
-    selectedTags,
+    selectedTopics,
     setSearchQuery
   } = useSearchProjects(data);
 
@@ -112,13 +112,15 @@ export function ContentWithSearchPage(props: ContentPageProps<true>) {
             <input
               type="text"
               placeholder="Search..."
+              aria-label="search"
+              name="search"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               className="w-full rounded-lg border border-zinc-200 bg-white py-2.5 pl-10 pr-10 text-sm text-black placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none dark:border-zinc-800 dark:bg-zinc-900 dark:text-white dark:placeholder:text-zinc-500 dark:focus:border-zinc-600"
             />
             {searchQuery && (
               <button
-                aria-label="close"
+                aria-label="clear"
                 onClick={() => setSearchQuery("")}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300">
                 <XMarkIcon className="h-4 w-4" />
@@ -131,20 +133,20 @@ export function ContentWithSearchPage(props: ContentPageProps<true>) {
             <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
               Filter:
             </span>
-            {allTags.map(tag => {
-              if (!tag) return null;
+            {allTopics.map(topic => {
+              if (!topic) return null;
               return (
                 <button
-                  aria-label={tag}
-                  key={tag}
-                  onClick={() => toggleTag(tag)}
+                  aria-label={topic}
+                  key={topic}
+                  onClick={() => toggleTopic(topic)}
                   className={cn(
                     "cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-colors",
-                    selectedTags.includes(tag)
+                    selectedTopics.includes(topic)
                       ? "bg-black text-white dark:bg-white dark:text-black"
                       : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700"
                   )}>
-                  {tag}
+                  {topic}
                 </button>
               );
             })}
@@ -181,7 +183,7 @@ export function ContentWithSearchPage(props: ContentPageProps<true>) {
                   <ContentCard
                     key={project.title}
                     {...project}
-                    selectedTags={selectedTags}
+                    selectedTopics={selectedTopics}
                   />
                 );
               })}
@@ -191,7 +193,7 @@ export function ContentWithSearchPage(props: ContentPageProps<true>) {
               <p className="text-sm text-zinc-500 dark:text-zinc-400">
                 No projects found.
               </p>
-              {(searchQuery || selectedTags?.length > 0) && (
+              {(searchQuery || selectedTopics?.length > 0) && (
                 <button
                   aria-label="clear-filters"
                   onClick={clearFilters}

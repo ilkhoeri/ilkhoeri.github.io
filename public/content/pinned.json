@@ -104,7 +104,9 @@
       "localization",
       "nextjs",
       "react",
-      "templates"
+      "templates",
+      "i18n",
+      "react-native"
     ]
   }
 ]

@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { GENERATED_EXPORT_PATH } from "@/routes";
-import { filteredRepos } from "@/lib/filter-projects";
+import { filterRepos } from "@/lib/filter-projects";
 import { ContentWithSearchPage } from "@/components/client-search";
 
 export default function ProjectsPageClient() {
@@ -20,7 +20,7 @@ export default function ProjectsPageClient() {
   }
 
   const publicRepos = JSON.parse(fs.readFileSync(publicPath, "utf-8"));
-  const projects = filteredRepos(publicRepos);
+  const projects = filterRepos(publicRepos);
 
   if (!projects) {
     return (

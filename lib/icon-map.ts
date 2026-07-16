@@ -1,28 +1,33 @@
 import {
+  AppsModularIcon,
   CombineIcon,
   CompassIcon,
-  GridPlusIcon,
+  IconsIcon,
   IconProps,
   LayerIcon,
   NetworkIcon,
   PaletteIcon,
   PuzzleIcon,
+  PWAIcon,
   TerminalIcon,
   TurborepoIcon,
-  ZapIcon
+  ZapIcon,
+  BookMarkIcon
 } from "@/components/icons";
 
 const iconGroups: [React.ComponentType, string[]][] = [
-  [PaletteIcon, ["ui-components", "ui"]],
+  [AppsModularIcon, ["modular", "lock-in", "components", "ui"]],
+  [PaletteIcon, ["css", "colors", "themes", "postcss"]],
   [TerminalIcon, ["cli"]],
   [CompassIcon, ["utilities", "utility"]],
   [PuzzleIcon, ["templates", "template"]],
-  [GridPlusIcon, ["icons"]],
+  [IconsIcon, ["icons"]],
   [LayerIcon, ["layers", "layer"]],
   [NetworkIcon, ["workspace"]],
   [TurborepoIcon, ["turborepo"]],
   [ZapIcon, ["variant", "variants", "api"]],
-  [CombineIcon, ["merge", "string-merging", "mergedeep"]]
+  [CombineIcon, ["merge", "string-merging", "mergedeep"]],
+  [PWAIcon, ["pwa"]]
 ];
 
 // Generate map automatically
@@ -54,5 +59,5 @@ export function getIconFromTags(
     if (match) return match[0];
   }
 
-  return null;
+  return BookMarkIcon;
 }

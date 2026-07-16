@@ -2,19 +2,20 @@ import fs from "fs";
 import path from "path";
 import { cnx, cvx } from "xuxi";
 import Link from "next/link";
-import { GENERATED_EXPORT_PATH } from "@/routes";
+import { allTopics, GENERATED_EXPORT_PATH } from "@/routes";
 import {
   ArrowUpRightIcon,
   BlueprintHelmetIcon,
   BookMarkIcon,
-  BookOpenIcon,
   CircleDotIcon,
   Code2Icon,
   ForkIcon,
   GithubIcon,
   HeartOutlineToneIcon,
-  InfoCircleIcon
+  InfoCircleIcon,
+  SvgProps
 } from "@/components/icons";
+import { FootLine } from "@/components/component-content";
 
 export default async function HomeCompt() {
   const filePath = path.join(
@@ -179,9 +180,7 @@ export default async function HomeCompt() {
 
         {/* Footer */}
         <footer className="mt-24 border-t border-zinc-100 pt-8 dark:border-zinc-800">
-          <p className="text-sm text-zinc-400 dark:text-zinc-500">
-            © {new Date().getFullYear()} ilkhoeri. Open source with ❤️
-          </p>
+          <FootLine type="creator" />
         </footer>
       </main>
     </div>
@@ -189,13 +188,6 @@ export default async function HomeCompt() {
 }
 
 const actionsList = [
-  {
-    href: "https://github.com/ilkhoeri",
-    label: "GitHub",
-    icon: <GithubIcon className="text-black size-6" />,
-    target: "_self" as const,
-    color: "contrast" as const
-  },
   {
     href: "/me",
     label: "About Me",
@@ -209,49 +201,52 @@ const actionsList = [
     icon: <HeartOutlineToneIcon className="text-[#db61a2] size-6" />,
     target: "_blank" as const,
     color: "slate" as const
+  },
+  {
+    href: "https://github.com/ilkhoeri",
+    label: "GitHub",
+    icon: <GithubIcon className="size-6" />,
+    target: "_self" as const,
+    color: "contrast" as const
   }
 ];
 
 const linklist = [
   {
     href: "/projects/",
-    tit: "Projects",
-    sub: "Explore my projects and experiments",
-    icon: <BlueprintHelmetIcon />
+    title: "All Projects",
+    desc: "Explore my projects and experiments",
+    icon: BlueprintHelmetIcon
   },
-  {
-    href: "/templates/",
-    tit: "Templates",
-    sub: "Collection of ready-to-use templates",
-    icon: <BookOpenIcon />
-  }
-  // {
-  //   href: "https://oerilabs.vercel.app/learn/",
-  //   tit: "Learning Center",
-  //   sub: "Tutorials and interactive learning",
-  //   icon: <Code2Icon />
-  // }
+  ...allTopics.map(t => ({
+    href: t.url,
+    title: t.title,
+    desc: t.shortDesc,
+    icon: t.icon
+  }))
 ];
 
 interface CompProps {
   href: string;
-  tit: string;
-  sub: string;
-  icon: React.ReactNode;
+  title: string;
+  desc: string;
+  icon: (props: SvgProps) => React.JSX.Element;
 }
 export function LinkList(props: CompProps) {
-  const { href, tit, sub, icon } = props;
+  const { href, title, desc, icon: Icon } = props;
   return (
     <Link
       href={href}
       className="group flex items-center justify-between border-b border-zinc-100 pb-4 transition-colors hover:border-zinc-300 dark:border-zinc-800 dark:hover:border-zinc-600">
       <div className="flex items-center gap-4">
         <span className="[&>svg]:size-5 text-zinc-400 transition-colors group-hover:text-black dark:group-hover:text-white">
-          {icon}
+          {Icon && <Icon />}
         </span>
         <div className="grid">
-          <span className="font-medium text-black dark:text-white">{tit}</span>
-          <span className="text-sm text-zinc-500">{sub}</span>
+          <span className="font-medium text-black dark:text-white">
+            {title}
+          </span>
+          <span className="text-sm text-zinc-500">{desc}</span>
         </div>
       </div>
       <ArrowUpRightIcon className="h-4 w-4 text-zinc-300 transition-all group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 dark:text-zinc-600 dark:group-hover:text-white" />
@@ -270,7 +265,8 @@ const classes = cvx({
         "bg-black text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200",
       theme:
         "border-zinc-200 text-black transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-white dark:hover:bg-zinc-900",
-      slate: "text-[#f0f6fc] fill-[#9198a1] bg-[#212830] border-[#3d444d]"
+      slate:
+        "text-[#f0f6fc] bg-[#4d5864] border-[#2d3137] dark:fill-[#9198a1] dark:bg-[#212830] dark:border-[#3d444d]"
     }
   }
 });
