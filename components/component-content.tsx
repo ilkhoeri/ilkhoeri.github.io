@@ -177,7 +177,7 @@ export function ContentCard(p: ProjectProps & { selectedTopics?: string[] }) {
   const isExperiment = p.topics?.some(t => t === "experimental");
   return (
     <div className="group relative">
-      <div className="flex flex-col rounded-xl border border-zinc-100 p-5 transition-all hover:border-zinc-300 hover:bg-zinc-50/50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50">
+      <div className="size-full flex flex-col rounded-xl border border-zinc-100 p-5 transition-all hover:border-zinc-300 hover:bg-zinc-50/50 dark:border-zinc-800 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50">
         <div className="mb-4 inline-flex items-center">
           <span
             className={cnx(

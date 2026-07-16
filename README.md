@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Public Repositories Catalog
 
-## Getting Started
+## Deskripsi
 
-First, run the development server:
+Aplikasi ini adalah **kumpulan data repositori publik** dari user GitHub yang berisi informasi lengkap tentang semua proyek yang telah dipublikasikan. Data ini berfungsi sebagai katalog terpusat untuk manajemen portfolio, tracking, dan referensi proyek.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## URL & Endpoint
+
+Aplikasi berjalan menggunakan framework `next.js@latest` dan me-render sebagian besar halaman dengan statis. Sebagian halaman me-render konten `markdown` (`mdx`) menggunakan `contentlayer`.
+
+## Penggunaan
+
+### Untuk Portfolio
+
+Data ini dapat digunakan untuk membuat:
+
+- Portfolio website yang dinamis
+- GitHub profile showcase
+- Project catalog dengan filtering
+
+### Untuk Analytics
+
+- Tracking repository growth
+- Analysis pola development
+- Monitoring engagement metrics
+
+### Untuk Documentation
+
+- Auto-generate project documentation
+- Maintain centralized catalog
+- Version history tracking
+
+## Format File
+
+File disimpan dalam format **JSON** dengan struktur array yang berisi object repository.
+
+```json
+[
+  {
+    "id": 123456,
+    "name": "repository-name",
+    "full_name": "username/repository-name",
+    "description": "Deskripsi repository"
+    // ... metadata lainnya
+  }
+]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Lisensi
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Repositori yang terdaftar menggunakan berbagai lisensi:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **MIT License**: Dominan di mayoritas proyek
+- **Other Licenses**: Beberapa proyek dengan lisensi custom
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
+- Data ini di-fetch dari **GitHub API** secara statis
+- Fork repositories tetap didokumentasikan untuk referensi
+- Repositori archived masih tersimpan untuk historical records
+- Status `updated_at` / `Last Updated` menunjukkan kapan metadata terakhir diupdate
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Last Updated**: 2026-07-16
