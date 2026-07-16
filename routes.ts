@@ -19,7 +19,7 @@ export type AllTopicWithIcon = Topic[];
 export const allTopics: AllTopicWithIcon = [
   {
     title: "Templates",
-    topics: ["templates", "ui", "components", "dashboard"],
+    topics: ["templates"],
     url: "/templates/",
     icon: BookOpenIcon,
     description: "Explore collection of ready-to-use templates",
